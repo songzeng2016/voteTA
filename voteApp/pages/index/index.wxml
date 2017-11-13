@@ -26,7 +26,8 @@
 
   <!-- section -->
   <view class='section'>
-    <view>
+    <!-- 筹码 -->
+    <view class='chip hide'>
       <view class='notice'>你参与了5个话题，押注了2300筹码，赢得210筹码。</view>
       <view class='content'>
         <view class='hint'>补充筹码,请点击图标</view>
@@ -42,6 +43,18 @@
           <view class='list'>
             <image class='coin' src='/image/200chip.png'></image>
             <text class='price'>50元</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 等级 -->
+    <view class='grade'>
+      <view class='notice'>天下才共八斗，学共五车，你的级别如何呢？</view>
+      <view class='content'>
+        <view>
+          <view class='capsule'>
+            <view class='left'>一斗</view>
+            <view class='right'>0000-1999</view>
           </view>
         </view>
       </view>

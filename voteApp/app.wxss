@@ -3,3 +3,28 @@
 view {
   box-sizing: border-box;
 }
+
+.hide {
+  display: none;
+}
+
+.capsule {
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  color: #fff;
+  font-size: 18rpx;
+}
+
+.capsule .left {
+  width: 64rpx;
+  background: #808080;
+  border-radius: 50% 0 0 50%;
+  border-right: 1px solid #e6e6e6;
+}
+
+.capsule .right {
+  width: 125rpx;
+  background: #b2b2b2;
+  border-radius: 0 50% 50% 0;
+}

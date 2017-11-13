@@ -105,3 +105,17 @@ page, .wrapper {
   color: #000;
   font-size: 24rpx;
 }
+
+/* grade */
+
+.chipList .price {
+  font-weight: 600;
+  color: #000;
+  font-size: 24rpx;
+}
+
+/* grade */
+
+.grade .capsule {
+  width: 187rpx;
+}
