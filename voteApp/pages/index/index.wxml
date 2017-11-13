@@ -1,13 +1,51 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class='wrapper'>
+  <!-- header -->
+  <view class='header'>
+    <view class='navList'>
+      <view class='type color_1'>筹码</view>
+      <text class='desc'>2320</text>
+    </view>
+    <view class='navList'>
+      <view class='type color_2'>等级</view>
+      <text class='desc'>一级</text>
+    </view>
+    <view class='navList'>
+      <image class='type avatar' src='{{userInfo.avatarUrl}}'></image>
+      <text class='desc'>{{userInfo.nickName}}</text>
+    </view>
+    <view class='navList'>
+      <view class='type color_3'>排名</view>
+      <text class='desc'>254</text>
+    </view>
+    <view class='navList'>
+      <view class='type color_4'>成绩</view>
+      <text class='desc'>8756</text>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <!-- section -->
+  <view class='section'>
+    <view>
+      <view class='notice'>你参与了5个话题，押注了2300筹码，赢得210筹码。</view>
+      <view class='content'>
+        <view class='hint'>补充筹码,请点击图标</view>
+        <view class='chipList'>
+          <view class='list'>
+            <image class='coin' src='/image/50chip.png'></image>
+            <text class='price'>10元</text>
+          </view>
+          <view class='list'>
+            <image class='coin' src='/image/100chip.png'></image>
+            <text class='price'>20元</text>
+          </view>
+          <view class='list'>
+            <image class='coin' src='/image/200chip.png'></image>
+            <text class='price'>50元</text>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
+
 </view>

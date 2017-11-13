@@ -1,21 +1,107 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+page, .wrapper {
+  width: 100%;
+  height: 100%;
+  background: #e6e6e6;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 240rpx;
+  padding-bottom: 32rpx;
+  background: #333;
+  color: white;
+  font-size: 24rpx;
+}
+
+.navList {
+  text-align: center;
+}
+
+.navList .type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 13rpx;
   border-radius: 50%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.navList .avatar {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
 }
 
-.usermotto {
-  margin-top: 200px;
+.navList .color_1 {
+  background: #e06437;
+}
+
+.navList .color_2 {
+  background: #2d71b6;
+}
+
+.navList .color_3 {
+  background: #53aadd;
+}
+
+.navList .color_4 {
+  background: #e28831;
+}
+
+/* notice */
+
+.notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 105rpx;
+  background: #fff;
+  color: #808080;
+  font-size: 27rpx;
+}
+
+.content {
+  width: 100%;
+  border-top: 1px solid #7c7c7c;
+}
+
+/* chip */
+
+.hint {
+  margin: 30rpx 0 80rpx 70rpx;
+  font-weight: 700;
+  color: #000;
+  font-size: 24rpx;
+}
+
+.chipList {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 100rpx;
+}
+
+.chipList .list {
+  text-align: center;
+}
+
+.chipList .coin {
+  display: block;
+  width: 105rpx;
+  height: 105rpx;
+}
+
+.chipList .price {
+  font-weight: 600;
+  color: #000;
+  font-size: 24rpx;
 }
