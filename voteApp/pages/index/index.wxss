@@ -136,3 +136,32 @@ page, .wrapper {
 .grade .capsule {
   margin-bottom: 25rpx;
 }
+
+/* score */
+
+.score .content {
+  padding: 0 55rpx;
+}
+
+/* 分数列表 */
+
+.scoreList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23rpx 0 17rpx 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.scoreList .iconWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.scoreList image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 14rpx;
+}

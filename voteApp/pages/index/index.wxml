@@ -18,7 +18,7 @@
       <view class='type color_3'>排名</view>
       <text class='desc'>254</text>
     </view>
-    <view class='navList' catchtap='navTab' data-cpage='grade' data-index='4'>
+    <view class='navList' catchtap='navTab' data-cpage='score' data-index='4'>
       <view class='type color_4'>成绩</view>
       <text class='desc'>8756</text>
     </view>
@@ -49,25 +49,33 @@
         </view>
       </view>
     </view>
+
     <!-- 等级 -->
     <view class='grade' hidden='{{cpage !== "grade"}}'>
       <view class='notice'>天下才共八斗，学共五车，你的级别如何呢？</view>
       <view class='content'>
-
         <view class='leftList'>
           <block wx:for='{{grade.leftList}}' wx:key='*grade.leftList'>
             <template is='capsule' data='{{item}}' />
           </block>
         </view>
-
         <view class='rightList'>
           <block wx:for='{{grade.rightList}}' wx:key='*grade.rightList'>
             <template is='capsule' data='{{item}}' />
           </block>
         </view>
-
       </view>
     </view>
+
+    <!-- 成绩 -->
+    <view class='score' hidden='{{cpage !== "score"}}'>
+      <view class='notice'>你参与了5个话题，押注了2300筹码，赢得210筹码。</view>
+      <view class='content'>
+        <template is='scoreList' />
+        <template is='scoreList' />
+      </view>
+    </view>
+
   </view>
 
 </view>
@@ -77,5 +85,15 @@
   <view class='capsule'>
     <view class='left' style='background: {{item.lbgc}};'>{{item.desc}}</view>
     <view class='right' style='background: {{item.rbgc}};'>{{item.num}}</view>
+  </view>
+</template>
+
+<template name='scoreList'>
+  <view class='scoreList'>
+    <view class='iconWrapper'>
+      <image src='/image/yazhu.png'></image>
+      <text>押注了15次，赢了5次</text>
+    </view>
+    <text>250</text>
   </view>
 </template>
