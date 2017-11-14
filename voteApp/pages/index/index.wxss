@@ -116,6 +116,13 @@ page, .wrapper {
 
 /* grade */
 
+.grade .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 60rpx 90rpx 0;
+}
+
 .grade .capsule {
-  width: 187rpx;
+  margin-bottom: 25rpx;
 }
