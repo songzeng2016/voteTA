@@ -9,6 +9,7 @@ page, .wrapper {
 /* header */
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -54,6 +55,15 @@ page, .wrapper {
 
 .navList .color_4 {
   background: #e28831;
+}
+
+.header .guide {
+  position: absolute;
+  left: 0;
+  bottom: -20rpx;
+  width: 80rpx;
+  height: 20rpx;
+  transition: 0.5s left;
 }
 
 /* notice */

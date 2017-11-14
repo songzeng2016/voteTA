@@ -2,32 +2,34 @@
 <view class='wrapper'>
   <!-- header -->
   <view class='header'>
-    <view class='navList'>
+    <view class='navList' catchtap='navTab' data-cpage='chip' data-index='0'>
       <view class='type color_1'>筹码</view>
       <text class='desc'>2320</text>
     </view>
-    <view class='navList'>
+    <view class='navList' catchtap='navTab' data-cpage='grade' data-index='1'>
       <view class='type color_2'>等级</view>
       <text class='desc'>一级</text>
     </view>
-    <view class='navList'>
+    <view class='navList' catchtap='navTab' data-cpage='grade' data-index='2'>
       <image class='type avatar' src='{{userInfo.avatarUrl}}'></image>
       <text class='desc'>{{userInfo.nickName}}</text>
     </view>
-    <view class='navList'>
+    <view class='navList' catchtap='navTab' data-cpage='grade' data-index='3'>
       <view class='type color_3'>排名</view>
       <text class='desc'>254</text>
     </view>
-    <view class='navList'>
+    <view class='navList' catchtap='navTab' data-cpage='grade' data-index='4'>
       <view class='type color_4'>成绩</view>
       <text class='desc'>8756</text>
     </view>
+
+    <image class='guide' style='left: {{guideLeft}}rpx' src='/image/guide.png'></image>
   </view>
 
   <!-- section -->
   <view class='section'>
     <!-- 筹码 -->
-    <view class='chip hide'>
+    <view class='chip' hidden='{{cpage !== "chip"}}'>
       <view class='notice'>你参与了5个话题，押注了2300筹码，赢得210筹码。</view>
       <view class='content'>
         <view class='hint'>补充筹码,请点击图标</view>
@@ -48,7 +50,7 @@
       </view>
     </view>
     <!-- 等级 -->
-    <view class='grade'>
+    <view class='grade' hidden='{{cpage !== "grade"}}'>
       <view class='notice'>天下才共八斗，学共五车，你的级别如何呢？</view>
       <view class='content'>
 

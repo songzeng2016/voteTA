@@ -4,6 +4,8 @@ const app = getApp()
 
 Page({
   data: {
+    cpage: 'grade',
+    guideLeft: 335,
     grade: {
       leftList: [
         {
@@ -68,6 +70,23 @@ Page({
       ]
     }
   },
+
+  // 导航切换页面
+  navTab: function (e) {
+    let data = e.currentTarget.dataset
+    let { cpage, index } = data
+    let guideLeft = this.data.guideLeft || ''
+
+    if (index < 2) {
+      guideLeft = 24 + index * 145
+    } else if (index == 2) {
+      guideLeft = 335
+    } else {
+      guideLeft = 335 + (index - 2) * 155
+    }
+    this.setData({ cpage, guideLeft })
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
