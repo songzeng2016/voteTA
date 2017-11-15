@@ -1,0 +1,76 @@
+/* pages/template/template.wxss */
+
+/* 胶囊 */
+
+.capsule {
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.capsule .left {
+  padding: 9rpx 13rpx 9rpx 20rpx;
+  background: #808080;
+  border-radius: 25rpx 0 0 25rpx;
+  border-right: 1px solid #e6e6e6;
+}
+
+.capsule .right {
+  padding: 9rpx 20rpx 9rpx 16rpx;
+  background: #b2b2b2;
+  border-radius: 0 25rpx 25rpx 0;
+}
+
+/* 排名列表 */
+
+.rankList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23rpx 0 17rpx 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.rankList .iconWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.rankList .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 14rpx;
+  border-radius: 50%;
+}
+
+.rankList .icon {
+  width: 38rpx;
+  height: 38rpx;
+}
+
+/* 分数列表 */
+
+.scoreList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23rpx 0 17rpx 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.scoreList .iconWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.scoreList image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 14rpx;
+}

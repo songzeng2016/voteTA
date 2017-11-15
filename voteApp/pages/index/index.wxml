@@ -1,4 +1,6 @@
 <!--index.wxml-->
+<import src='/pages/template/template.wxml'/>
+
 <view class='wrapper'>
   <!-- header -->
   <view class='header'>
@@ -14,7 +16,7 @@
       <image class='type avatar' src='{{userInfo.avatarUrl}}'></image>
       <text class='desc'>{{userInfo.nickName}}</text>
     </view>
-    <view class='navList' catchtap='navTab' data-cpage='grade' data-index='3'>
+    <view class='navList' catchtap='navTab' data-cpage='ranking' data-index='3'>
       <view class='type color_3'>排名</view>
       <text class='desc'>254</text>
     </view>
@@ -67,6 +69,15 @@
       </view>
     </view>
 
+    <!-- 排名 -->
+    <view class='ranking' hidden='{{cpage !== "ranking"}}'>
+      <view class='notice'>全部排名</view>
+      <view class='content'>
+        <template is='rankList' data='{{userInfo}}' />
+        <template is='rankList' data='{{userInfo}}' />
+      </view>
+    </view>
+
     <!-- 成绩 -->
     <view class='score' hidden='{{cpage !== "score"}}'>
       <view class='notice'>你参与了5个话题，押注了2300筹码，赢得210筹码。</view>
@@ -79,21 +90,3 @@
   </view>
 
 </view>
-
-
-<template name='capsule'>
-  <view class='capsule'>
-    <view class='left' style='background: {{item.lbgc}};'>{{item.desc}}</view>
-    <view class='right' style='background: {{item.rbgc}};'>{{item.num}}</view>
-  </view>
-</template>
-
-<template name='scoreList'>
-  <view class='scoreList'>
-    <view class='iconWrapper'>
-      <image src='/image/yazhu.png'></image>
-      <text>押注了15次，赢了5次</text>
-    </view>
-    <text>250</text>
-  </view>
-</template>

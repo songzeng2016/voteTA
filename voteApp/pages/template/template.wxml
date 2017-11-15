@@ -1,0 +1,35 @@
+<!--pages/template/template.wxml-->
+
+<!-- 胶囊 -->
+<template name='capsule'>
+  <view class='capsule'>
+    <view class='left' style='background: {{item.lbgc}};'>{{item.desc}}</view>
+    <view class='right' style='background: {{item.rbgc}};'>{{item.num}}</view>
+  </view>
+</template>
+
+<!-- 排名列表 -->
+<template name='rankList'>
+  <view class='rankList'>
+    <view class='iconWrapper'>
+      <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+      <view>
+        <text>{{userInfo.nickName}}</text>
+        <template is='capsule' data='{{item}}' />
+      </view>
+    </view>
+    <image class='icon' src='/image/1st.png'></image>
+    <!-- <text>250</text> -->
+  </view>
+</template>
+
+<!-- 成绩列表 -->
+<template name='scoreList'>
+  <view class='scoreList'>
+    <view class='iconWrapper'>
+      <image src='/image/yazhu.png'></image>
+      <text>押注了15次，赢了5次</text>
+    </view>
+    <text>250</text>
+  </view>
+</template>

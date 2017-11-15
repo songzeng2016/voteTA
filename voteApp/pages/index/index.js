@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    cpage: 'score',
+    cpage: 'ranking',
     guideLeft: 335,
     grade: {
       leftList: [
@@ -77,13 +77,13 @@ Page({
     let { cpage, index } = data
     let guideLeft = this.data.guideLeft || ''
 
-    // 位置计算（大于 2 的）有待完善
+    // 位置计算
     if (index < 2) {
       guideLeft = 24 + index * 145
     } else if (index == 2) {
       guideLeft = 335
     } else {
-      guideLeft = 335 + (index - 2) * 155
+      guideLeft = 500 + (index - 3) * 145
     }
     this.setData({ cpage, guideLeft })
   },
