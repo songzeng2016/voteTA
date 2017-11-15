@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    cpage: 'ranking',
+    cpage: 'index',
     guideLeft: 335,
     grade: {
       leftList: [

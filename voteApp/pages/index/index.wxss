@@ -119,14 +119,6 @@ page, .wrapper {
 
 /* grade */
 
-.chipList .price {
-  font-weight: 600;
-  color: #000;
-  font-size: 24rpx;
-}
-
-/* grade */
-
 .grade .content {
   display: flex;
   flex-direction: row;
@@ -136,6 +128,52 @@ page, .wrapper {
 
 .grade .capsule {
   margin-bottom: 25rpx;
+}
+
+/* index */
+
+.index .notice {
+  background: #e6e6e6;
+}
+
+.index .content {
+  border: none;
+}
+
+.iList {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 36rpx;
+  padding: 26rpx 50rpx;
+  background: white;
+  font-size: 24rpx;
+}
+
+.index .footer {
+  position: fixed;
+  left: 5%;
+  bottom: 36rpx;
+  width: 90%;
+  padding: 10rpx 0;
+  background: #4aa69d;
+  color: white;
+  font-size: 30rpx;
+}
+
+.iList .prizeImg {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.iList .prizeText {
+  padding: 6rpx 10rpx;
+  margin-left: -20rpx;
+  background: #e06437;
+  border-radius: 50%;
+  color: white;
+  font-size: 24rpx;
 }
 
 /* ranking */

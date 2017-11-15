@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<import src='/pages/template/template.wxml'/>
+<import src='/pages/template/template.wxml' />
 
 <view class='wrapper'>
   <!-- header -->
@@ -12,7 +12,7 @@
       <view class='type color_2'>等级</view>
       <text class='desc'>一级</text>
     </view>
-    <view class='navList' catchtap='navTab' data-cpage='grade' data-index='2'>
+    <view class='navList' catchtap='navTab' data-cpage='index' data-index='2'>
       <image class='type avatar' src='{{userInfo.avatarUrl}}'></image>
       <text class='desc'>{{userInfo.nickName}}</text>
     </view>
@@ -66,6 +66,50 @@
             <template is='capsule' data='{{item}}' />
           </block>
         </view>
+      </view>
+    </view>
+
+    <!-- 主页 -->
+    <view class='index' hidden='{{cpage !== "index"}}'>
+      <view class='notice'>每一次参与，都是知识沉淀的过程。</view>
+      <view class='content'>
+
+        <view class='iList'>
+          <view>
+            <view>VOL.12</view>
+            <view>谁是足坛王者</view>
+            <view>半决赛进行中，2313人参与</view>
+            <view>
+              <image class='prizeImg' src='/image/prize.png'></image>
+              <image class='prizeImg' src='/image/prize.png'></image>
+              <image class='prizeImg' src='/image/prize.png'></image>
+            </view>
+          </view>
+          <view>
+            <image class='prizeImg' src='/image/prize.png'></image>
+            <text class='prizeText'>奖</text>
+          </view>
+        </view>
+        <view class='iList'>
+          <view>
+            <view>VOL.12</view>
+            <view>谁是足坛王者</view>
+            <view>半决赛进行中，2313人参与</view>
+            <view>
+              <image class='prizeImg' src='/image/prize.png'></image>
+              <image class='prizeImg' src='/image/prize.png'></image>
+              <image class='prizeImg' src='/image/prize.png'></image>
+              <image class='prizeImg' src='/image/prize.png'></image>
+            </view>
+          </view>
+          <view>
+            <image class='prizeImg' src='/image/prize.png'></image>
+            <text class='prizeText'>奖</text>
+          </view>
+        </view>
+
+        <button class='footer'>初次使用，了解规则</button>
+
       </view>
     </view>
 
