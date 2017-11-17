@@ -1,0 +1,20 @@
+/*详情 B */
+.top{width: 100%;height: 280rpx;background: #323232;font-size: 24rpx;}
+.top_main{padding: 40rpx;}
+.top_conten{display: inline-block;width: 460rpx;padding-left: 40rpx;vertical-align: top;line-height: 40rpx;color: #B2B2B2;}
+.top_img{width: 200rpx;height: 200rpx; vertical-align: top;}
+.nums{color: #B2B2B2;font-size: 24rpx;height: 80rpx;line-height: 80rpx;border-bottom: 1rpx solid #323232;padding: 0 40rpx;}
+.list{min-height: 200rpx;border-bottom: 1rpx solid #B2B2B2;padding: 20rpx 40rpx;}
+.userinfo-avatar {width: 60rpx; height: 60rpx; margin: 20rpx; border-radius: 50%;vertical-align:middle;}
+.content_text{font-size: 24rpx;display: inline-block;vertical-align:middle;}
+.list_R{font-size: 20rpx;color: #fff;text-align: center;height: 40rpx;line-height: 40rpx; margin-top: 30rpx;}
+.praise{background: #00A99D;border-top-left-radius: 20rpx;width: 100rpx; border-bottom-left-radius: 20rpx;}
+.trample{background: #999999;border-top-right-radius: 20rpx;width: 100rpx;border-bottom-right-radius: 20rpx;}
+.list_content{padding-left: 100rpx;}
+.btm_img{border-radius: 50%;width: 80rpx;height: 80rpx;position: fixed;left: 40rpx;bottom: 70rpx;border: 8rpx solid #00A99D;}
+.bottom{background: #00A99D;height: 120rpx;width: 100%; position: fixed;bottom: 0rpx;color: #fff;}
+.btm_num{padding-left: 140rpx;line-height: 50rpx;}
+.bottom_btn{width: 164rpx;height: 60rpx;line-height: 60rpx; border-radius: 30rpx;background: #fff;position: fixed;bottom: 30rpx;right: 20rpx; color: #00A99D; text-align: center;}
+/*详情 E */
+.fr{float: right;}
+.display{display: inline-block;}

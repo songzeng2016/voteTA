@@ -1,0 +1,26 @@
+page{background: #E5E5E5;}
+/*头部标题  */
+.header{height: 120rpx;background: #323232;display: flex;font-size: 28rpx;color: #B2B2B2;line-height: 120rpx;text-align: center;justify-content: space-around; align-items: flex-end; width: 100%; position: relative;}
+.header .guide { position: absolute; left: 20rpx;bottom: -20rpx;width: 80rpx; height: 20rpx;transition: 0.5s left;}
+.flex{flex: 1}
+.fff{color: #fff;}
+/*列表  B*/
+.b_top{color: #7F7F7F;height: 100rpx;line-height: 100rpx;font-size: 28rpx;}
+.bigL{padding: 0 40rpx;}
+.b_main{position: relative;}
+.b_lists{height: 400rpx;width: 100%; display: flex; display: -webkit-box; flex-direction: column;}   
+.b_list{width: 200rpx;height: 400rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;flex: 1;margin-right: 25rpx;}
+.b_mark{width: 24rpx;height: 24rpx;border-radius: 50%;background: #000;font-size: 18rpx;color: #fff;line-height: 24rpx;text-align: center;position: relative;top: 8rpx;left: 8rpx;}
+.news{font-size: 18rpx;color: #B2B2B2;position: absolute;right: 20rpx;top: 8rpx;vertical-align: bottom;}
+.b_news{width: 20rpx;height: 20rpx;vertical-align: bottom;padding-left: 10rpx;}
+.b_head{width: 180rpx;height: 180rpx;padding: 16rpx 10rpx 0rpx 10rpx;}
+.b_name{font-size: 24rpx; color: #040000;text-align: center;}
+.b_num{text-align: center;font-size: 48rpx;font-weight: 500;}
+.b_tou{width: 117rpx;height: 50rpx;padding: 10rpx 40rpx;}
+.b_toua{font-size: 24rpx;color: #fff;display: inline-block;position: absolute;bottom: 30rpx; left: 75rpx;}
+.b_direction{width: 24rpx; height: 37rpx;}
+.b_left{position: absolute;left: -35rpx;top: 170rpx;}
+.b_right{position: absolute;right: -35rpx; top: 170rpx;}
+/*列表  E*/
+.fr{float: right;}
+.display{display: inline-block;}

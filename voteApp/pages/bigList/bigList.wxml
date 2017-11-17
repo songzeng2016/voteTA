@@ -1,0 +1,90 @@
+<!-- header -->
+<view class='header'>
+  <view class=' flex' catchtap='navTab' data-index='0'>大名单</view>
+  <view class='quarter flex' catchtap='navTab' data-index='1'>四分之一</view>
+  <view class='semifinalsbh flex' catchtap='navTab' data-index='2'>半决赛</view>
+  <view class='final flex' catchtap='navTab' data-index='3'>总决赛</view>
+  <view class='end flex' catchtap='navTab' data-index='4'>大结局</view>
+  <image class='guide' style='left: {{guideLeft}}rpx' src='/image/guide.png'></image>
+</view>
+
+
+<!--列表  B-->
+<view class='bigL'>
+  <view class='b_top'>喜欢ta，就投ta</view>
+  <view class='b_main'>
+    <image src='../../image/left.png' class='b_left b_direction'></image>
+    <scroll-view scroll-x="true">
+      <view class='b_lists'>
+        <view class='b_list' scroll-x="true">
+          <view class='b_content display'>
+            <view class='b_mark'>1</view>
+            <view class='news display'>
+              <text class='display'>12</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='../../image/1.jpg' class='b_head'></image>
+            <view class='b_name'>齐达内</view>
+            <view class='b_num'>5689</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
+            </view>
+          </view>
+        </view>
+        <view class='b_list' scroll-x="true">
+          <view class='b_content display'>
+            <view class='b_mark'>1</view>
+            <view class='news display'>
+              <text class='display'>12</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='../../image/1.jpg' class='b_head'></image>
+            <view class='b_name'>齐达内</view>
+            <view class='b_num'>5689</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
+            </view>
+          </view>
+        </view>
+        <view class='b_list' scroll-x="true">
+          <view class='b_content display'>
+            <view class='b_mark'>1</view>
+            <view class='news display'>
+              <text class='display'>12</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='../../image/1.jpg' class='b_head'></image>
+            <view class='b_name'>齐达内</view>
+            <view class='b_num'>5689</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
+            </view>
+          </view>
+        </view>
+        <view class='b_list' scroll-x="true">
+          <view class='b_content display'>
+            <view class='b_mark'>1</view>
+            <view class='news display'>
+              <text class='display'>12</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='../../image/1.jpg' class='b_head'></image>
+            <view class='b_name'>齐达内</view>
+            <view class='b_num'>5689</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <image src='../../image/right.png' class='b_right b_direction'></image>
+  </view>
+
+</view>
+
+<!--列表  E-->

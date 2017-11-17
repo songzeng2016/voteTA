@@ -1,0 +1,30 @@
+
+<!--详情 B-->
+<view class='top'>
+  <view class='top_main'>
+    <image class='top_img' src='../../image/1.jpg'></image>
+    <view class='top_conten'>在足球这个范畴当中，民众（始终是被蒙蔽的、诉求单纯的）看来，马拉多纳是神；而权贵和固有势力（始终是高大上的、是占据金字塔顶端的，所以是球场的亮部）看来，他是魔鬼。</view>
+  </view>
+  <view class='comment'>
+    <view class='nums'>125条助威</view>
+    <view class='lists'>
+      <view class='list'>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <view class="content_text">
+          <text>达芬奇 
+                 3分钟前</text>
+        </view>
+        <view class='list_R fr'>
+          <view class='praise display'>赞521</view>
+          <view class='trample display'>灭3</view>
+        </view>
+        <view class='list_content'>马拉多纳和其他的选手不是同一个层次的。他远远胜于其他的天才，相信像他那样的足球选手应该不会再出现第二个了。</view>
+      </view>
+    </view>
+  </view>
+  <view class='bottom'>
+      <view><image src='{{userInfo.avatarUrl}}' class='btm_img'></image> <text class='display btm_num'>助威3次 获得34个赞</text></view>
+      <view class='bottom_btn'>我要助威</view>
+  </view>
+</view>
+<!--详情 E-->

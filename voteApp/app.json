@@ -1,12 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/template/template"
+    "pages/template/template",
+    "pages/ rule/ rule",
+    "pages/details/details",
+    "pages/bigList/bigList"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#e28831",
     "navigationBarTitleText": "投ta",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   }
 }
