@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/template/template",
-    "pages/ rule/ rule",
     "pages/details/details",
     "pages/bigList/bigList"
   ],
