@@ -85,6 +85,91 @@
     <image src='../../image/right.png' class='b_right b_direction'></image>
   </view>
 
-</view>
+  <view class='b_main'>
+    <image src='../../image/left.png' class='b_left b_direction'></image>
+    <scroll-view scroll-x="true">
+      <view class='b_lists'>
+        <view class='b_list' scroll-x="true">
+          <view class='b_content display'>
+            <view class='b_mark'>1</view>
+            <view class='news display'>
+              <text class='display'>12</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='../../image/1.jpg' class='b_head'></image>
+            <view class='b_name'>齐达内</view>
+            <view class='b_num'>5689</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
+            </view>
+          </view>
+        </view>
+        <view class='b_list' scroll-x="true">
+          <view class='b_content display'>
+            <view class='b_mark'>1</view>
+            <view class='news display'>
+              <text class='display'>12</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='../../image/1.jpg' class='b_head'></image>
+            <view class='b_name'>齐达内</view>
+            <view class='b_num'>5689</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
+            </view>
+          </view>
+        </view>
+        <view class='b_list' scroll-x="true">
+          <view class='b_content display'>
+            <view class='b_mark'>1</view>
+            <view class='news display'>
+              <text class='display'>12</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='../../image/1.jpg' class='b_head'></image>
+            <view class='b_name'>齐达内</view>
+            <view class='b_num'>5689</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
+            </view>
+          </view>
+        </view>
+        <view class='b_list' scroll-x="true">
+          <view class='b_content display'>
+            <view class='b_mark'>1</view>
+            <view class='news display'>
+              <text class='display'>12</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='../../image/1.jpg' class='b_head'></image>
+            <view class='b_name'>齐达内</view>
+            <view class='b_num'>5689</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <image src='../../image/right.png' class='b_right b_direction'></image>
+  </view>
 
+  <view class='b_time'>
+   <text>今晚八点公布八强名单</text>
+  </view>
+</view>
+<view class='b_bottom'>
+  <view>
+    <image src='{{userInfo.avatarUrl}}' class='b_btm_img'></image>
+    <text class='display b_btm_num'>共投出12票</text>
+  </view>
+  <view class='b_btoR'>
+    <text>加入投ta粉丝群</text>
+    <image src='../../image/1.jpg' class='b_btoImg'></image>
+  </view>
+</view>
 <!--列表  E-->

@@ -5,11 +5,11 @@ page{background: #E5E5E5;}
 .flex{flex: 1}
 .fff{color: #fff;}
 /*列表  B*/
-.b_top{color: #7F7F7F;height: 100rpx;line-height: 100rpx;font-size: 28rpx;}
+.b_top{color: #7F7F7F;height: 40rpx;line-height: 75rpx;font-size: 28rpx;}
 .bigL{padding: 0 40rpx;}
-.b_main{position: relative;}
+.b_main{position: relative;padding-top: 30rpx;}
 .b_lists{height: 400rpx;width: 100%; display: flex; display: -webkit-box; flex-direction: column;}   
-.b_list{width: 200rpx;height: 400rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;flex: 1;margin-right: 25rpx;}
+.b_list{width: 200rpx;height: 400rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;flex: 1;margin-right: 34rpx;}
 .b_mark{width: 24rpx;height: 24rpx;border-radius: 50%;background: #000;font-size: 18rpx;color: #fff;line-height: 24rpx;text-align: center;position: relative;top: 8rpx;left: 8rpx;}
 .news{font-size: 18rpx;color: #B2B2B2;position: absolute;right: 20rpx;top: 8rpx;vertical-align: bottom;}
 .b_news{width: 20rpx;height: 20rpx;vertical-align: bottom;padding-left: 10rpx;}
@@ -19,8 +19,16 @@ page{background: #E5E5E5;}
 .b_tou{width: 117rpx;height: 50rpx;padding: 10rpx 40rpx;}
 .b_toua{font-size: 24rpx;color: #fff;display: inline-block;position: absolute;bottom: 30rpx; left: 75rpx;}
 .b_direction{width: 24rpx; height: 37rpx;}
-.b_left{position: absolute;left: -35rpx;top: 170rpx;}
-.b_right{position: absolute;right: -35rpx; top: 170rpx;}
+.b_left{position: absolute;left: -35rpx;top: 200rpx;}
+.b_right{position: absolute;right: -35rpx; top: 200rpx;}
+.b_time{font-size: 24rpx;color: #040000;height: 40rpx;float: right;padding-top: 20rpx;}
+
+.b_btm_img{border-radius: 50%;width: 80rpx;height: 80rpx;position: fixed;left: 40rpx;bottom: 70rpx;border: 8rpx solid #00A99D;}
+.b_bottom{background: #00A99D;height: 120rpx;width: 100%; position: fixed;bottom: 0rpx;color: #fff;font-size: 24rpx;}
+.b_btm_num{padding-left: 140rpx;line-height: 50rpx;}
+.bottom_btn{width: 164rpx;height: 60rpx;line-height: 60rpx; border-radius: 30rpx;background: #fff;position: fixed;bottom: 30rpx;right: 20rpx; color: #00A99D; text-align: center;}
+.b_btoImg{width: 78rpx; height: 78rpx;vertical-align: middle;padding-left: 10rpx;}
+.b_btoR{position: absolute; top: 20rpx;right: 30rpx;}
 /*列表  E*/
 .fr{float: right;}
 .display{display: inline-block;}
