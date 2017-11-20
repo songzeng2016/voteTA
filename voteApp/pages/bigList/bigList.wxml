@@ -293,7 +293,7 @@
   <view class='quarter_top'>二选一,看你的眼光了</view>
   <view class='quarter_main'>
     <image src='../../image/left.png' class='b_left b_direction'></image>
-    <scroll-view scroll-x="true">
+    <scroll-view scroll-x="true" style="height: 460rpx;">
       <view  class='quarter_lists' scroll-x="true">
         <view class='quarter_one'>
           <view class='quarter_list'>
