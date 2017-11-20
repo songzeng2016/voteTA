@@ -1,6 +1,6 @@
 /**app.wxss**/
 
-view {
+page, view {
   box-sizing: border-box;
 }
 

@@ -21,12 +21,24 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "列表",
 					"pathName": "pages/bigList/bigList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "ranking",
+					"pathName": "pages/ranking/ranking",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "score",
+					"pathName": "pages/score/score",
 					"query": ""
 				}
 			]

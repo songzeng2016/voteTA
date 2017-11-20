@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/template/template",
+    "pages/ranking/ranking",
+    "pages/score/score",
     "pages/details/details",
     "pages/bigList/bigList"
   ],

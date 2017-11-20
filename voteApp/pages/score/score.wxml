@@ -1,0 +1,4 @@
+<!--pages/score/score.wxml-->
+<import src='/pages/template/template.wxml' />
+
+<template is='scoreList' data='' />

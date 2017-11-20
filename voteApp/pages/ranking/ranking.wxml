@@ -1,0 +1,4 @@
+<!--pages/ranking/ranking.wxml-->
+<import src='/pages/template/template.wxml' />
+
+<template is='rankList' data='' />
