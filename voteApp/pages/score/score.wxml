@@ -8,3 +8,5 @@
 <view class='scoreWrapper'>
   <template is='scoreList' data='' />
 </view>
+
+<button class='footer'>查看排名</button>

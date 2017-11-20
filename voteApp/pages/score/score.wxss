@@ -22,3 +22,14 @@ page {
   color: #808080;
   font-size: 26rpx;
 }
+
+.footer {
+  position: fixed;
+  left: 5%;
+  bottom: 36rpx;
+  width: 90%;
+  padding: 10rpx 0;
+  background: #4aa69d;
+  color: white;
+  font-size: 30rpx;
+}
