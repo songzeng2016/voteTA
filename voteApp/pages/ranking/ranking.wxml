@@ -1,4 +1,11 @@
 <!--pages/ranking/ranking.wxml-->
 <import src='/pages/template/template.wxml' />
 
-<template is='rankList' data='' />
+<view class='header'>
+  <view class='tab {{sType === "fri" && "selected"}}' bindtap='switchTab' data-type='fri'>好友排名</view>
+  <view class='tab {{sType === "all" && "selected"}}' bindtap='switchTab' data-type='all'>全部排名</view>
+</view>
+
+<view class='rankWrapper'>
+  <template is='rankList' data='' />
+</view>

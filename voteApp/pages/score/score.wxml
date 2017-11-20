@@ -1,4 +1,10 @@
 <!--pages/score/score.wxml-->
 <import src='/pages/template/template.wxml' />
 
-<template is='scoreList' data='' />
+<view class='header'>
+  <text>你获得了3833分，排名29位</text>
+</view>
+
+<view class='scoreWrapper'>
+  <template is='scoreList' data='' />
+</view>
