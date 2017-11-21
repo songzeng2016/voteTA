@@ -32,13 +32,15 @@ page{background: #E5E5E5;}
 /*列表  E*/
 
 /*四分之一 B */
-.quarter_main{position: relative;padding-top: 20rpx;}
+.quarter_main{position: relative;padding: 20rpx  40rpx;}
 .quarter_top{color: #7F7F7F;height: 40rpx;line-height: 75rpx;font-size: 28rpx;padding-left: 80rpx;}
 .vs{background: #999999;width:70rpx;height: 40rpx;line-height:40rpx;font-size: 24rpx;border-radius: 20rpx;text-align: center;color: #fff;font-weight: 600; position: absolute;top: 300rpx;left: 180rpx; z-index: 9;}
 .quarter_group{position: absolute;top: -40rpx;left: 180rpx;font-size: 24rpx;color: #040000;z-index: 99;}
 .quarter_list{width: 200rpx;height: 400rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;margin-right: 34rpx;display: inline-block;}
 .quarter_one{position: relative;height: 400rpx; flex: 1； }
-.quarter_lists{height: 400rpx;width: 100%; display: flex; display: -webkit-box;flex-direction: column;padding: 60rpx 0;}   
+.quarter_lists{height: 400rpx;width: 100%; display: flex; display: -webkit-box;flex-direction: column;padding-top: 60rpx;}   
+.quarter_left{position: absolute;left: 8rpx;top: 300rpx;}
+.quarter_right{position: absolute;right: 8rpx; top: 300rpx;}
 
 .chipList {
   display: flex;
@@ -56,7 +58,30 @@ page{background: #E5E5E5;}
   width: 105rpx;
   height: 105rpx;
 }
-.quarter_time{font-size: 24rpx;color: #040000;height: 40rpx;float: right;padding-top: 80rpx;}
+.quarter_time{font-size: 24rpx;color: #040000;height: 40rpx;position: absolute;right: 30rpx;top: -40rpx;}
+
+.sem_top{display: flex;}
+.sem_Tl{flex: 1; border-right: 1rpx solid #000;padding-right: 40rpx;}
+.sem_Tr{flex: 1;text-align: right;padding-right: 40rpx;}
+.sem_tt{font-size: 48rpx;margin-left: 40rpx;}
+.sem_bb{font-size: 24rpx;margin-left: 40rpx; }
+.sem_commen{background: #fff;height: 260rpx;width: 422rpx;border-radius: 8rpx;margin-left: 22%;}
+.sem_btm{padding-top: 20rpx;}
+.sem_t1{font-size: 36rpx;height: 50rpx; line-height: 50rpx;}
+.sem_t2{font-size: 24rpx;height: 40rpx; line-height: 40rpx;}
+.null{height: 20rpx;}
 /*四分之一 E */
+
+
+/* 总决赛 B */
+.endheight{height: 60rpx;}
+.numImg{width:40rpx; height: 43rpx;position: absolute;left: 90rpx; top: -20rpx;z-index: 99;}
+.endPadding{padding-top: 50rpx;}
+.end_lists{width: 100%; display: flex; display: -webkit-box; flex-direction: column;}   
+.end_list{width: 200rpx;height: 484rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;flex: 1;margin-right: 34rpx;}
+.end_bigName{font-size: 20rpx;text-align: center;height: 30rpx;line-height: 30rpx;}
+/*总决赛 E  */
 .fr{float: right;}
 .display{display: inline-block;}
+.textCenter{text-align: center;}
+
