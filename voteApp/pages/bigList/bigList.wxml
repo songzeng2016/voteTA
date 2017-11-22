@@ -413,7 +413,7 @@
     <view class='endheight '></view>
     <view class='b_main'>
       <image src='../../image/left.png' class='end_left b_direction'></image>
-      <scroll-view scroll-x="true">
+      <scroll-view scroll-x="true" style="height: 560rpx;">
         <view class='end_lists' style='heigth:100%;'>
           <view class='end_list' scroll-x="true">
             <image src='../../image/1st.png' class='numImg'></image>

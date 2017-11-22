@@ -76,9 +76,9 @@ page{background: #E5E5E5;}
 
 /* 总决赛 B */
 .endheight{height: 60rpx;}
-.numImg{width:40rpx; height: 43rpx;position: absolute;left: 90rpx; top: -20rpx;z-index: 99;}
+.numImg{width:40rpx; height: 43rpx;position: absolute;left: 90rpx; top: -70rpx;z-index: 99;}
 .endPadding{padding-top: 50rpx;}
-.end_lists{width: 100%; display: flex; display: -webkit-box; flex-direction: column;}   
+.end_lists{width: 100%; padding-top: 70rpx; display: flex; display: -webkit-box; flex-direction: column;}   
 .end_list{width: 200rpx;height: 484rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;flex: 1;margin-right: 34rpx;}
 .end_bigName{font-size: 20rpx;text-align: center;height: 30rpx;line-height: 30rpx;}
 .end_sum{font-size: 46rpx;text-align: center;height: 80rpx;line-height: 80rpx;}
