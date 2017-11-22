@@ -74,7 +74,7 @@
       <view class='notice'>每一次参与，都是知识沉淀的过程。</view>
       <view class='content'>
 
-        <view class='iList'>
+        <view class='iList' bindtap='golist'>
           <view>
             <view>VOL.12</view>
             <view>谁是足坛王者</view>
@@ -90,7 +90,7 @@
             <text class='prizeText'>奖</text>
           </view>
         </view>
-        <view class='iList'>
+        <view class='iList' bindtap='golist'>
           <view>
             <view>VOL.12</view>
             <view>谁是足坛王者</view>
