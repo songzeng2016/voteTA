@@ -27,6 +27,7 @@ page{background: #E5E5E5;}
 .b_bottom{background: #00A99D;height: 120rpx;width: 100%; position: fixed;bottom: 0rpx;color: #fff;font-size: 24rpx;}
 .b_btm_num{padding-left: 140rpx;line-height: 50rpx;}
 .bottom_btn{width: 164rpx;height: 60rpx;line-height: 60rpx; border-radius: 30rpx;background: #fff;position: fixed;bottom: 30rpx;right: 20rpx; color: #00A99D; text-align: center;}
+.bottom_btns{width: 164rpx;height: 60rpx;line-height: 60rpx; border-radius: 30rpx;background: #fff;position: fixed;bottom: 30rpx;right:210rpx; color: #00A99D; text-align: center;}
 .b_btoImg{width: 78rpx; height: 78rpx;vertical-align: middle;padding-left: 10rpx;}
 .b_btoR{position: absolute; top: 20rpx;right: 30rpx;}
 /*列表  E*/
@@ -80,8 +81,20 @@ page{background: #E5E5E5;}
 .end_lists{width: 100%; display: flex; display: -webkit-box; flex-direction: column;}   
 .end_list{width: 200rpx;height: 484rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;flex: 1;margin-right: 34rpx;}
 .end_bigName{font-size: 20rpx;text-align: center;height: 30rpx;line-height: 30rpx;}
+.end_sum{font-size: 46rpx;text-align: center;height: 80rpx;line-height: 80rpx;}
+.end_name{font-size: 24rpx; color: #040000;text-align: center;height: 50rpx;line-height: 50rpx;}
+.end_center{height: 220rpx; padding-top: 60rpx;}
+.end_img{width: 81rpx;height: 81rpx;vertical-align: middle;}
+.end_number{font-size: 24rpx;padding-left: 20rpx;}
+.end_one{height: 100rpx;}
+.end_left{position: absolute;left: -35rpx;top: 290rpx;}
+.end_right{position: absolute;right: -35rpx; top: 290rpx;}
 /*总决赛 E  */
 .fr{float: right;}
+.fl{float: left;}
+.pl{padding-left: 20rpx;}
+.pr{padding-right: 20rpx;}
+.pt{padding-top: 20rpx;}
 .display{display: inline-block;}
 .textCenter{text-align: center;}
 

@@ -5,13 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    cpage: 'index',
+    guideLeft: 25,
   },
 
   // 导航切换
   navTab: function (e) {
     let data = e.currentTarget.dataset
-    console.log(e)
+    console.log(data)
     let { cpage, index } = data
     let guideLeft = this.data.guideLeft || ''
 

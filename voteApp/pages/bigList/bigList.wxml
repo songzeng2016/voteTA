@@ -1,16 +1,16 @@
 <!-- header -->
 <view class='header'>
-  <view class=' flex' catchtap='navTab' data-index='0'>大名单</view>
-  <view class='quarter flex' catchtap='navTab' data-index='1'>四分之一</view>
-  <view class='semifinalsbh flex' catchtap='navTab' data-index='2'>半决赛</view>
+  <view class=' flex' catchtap='navTab' data-index='0'  data-cpage='index'>大名单</view>
+  <view class='quarter flex' catchtap='navTab' data-index='1' data-cpage='quarter'>四分之一</view>
+  <view class='semifinalsbh flex' catchtap='navTab' data-index='2'  data-cpage='final'>半决赛</view>
   <view class='final flex' catchtap='navTab' data-index='3'>总决赛</view>
-  <view class='end flex' catchtap='navTab' data-index='4'>大结局</view>
+  <view class='end flex' catchtap='navTab' data-index='4' data-cpage='end'>大结局</view>
   <image class='guide' style='left: {{guideLeft}}rpx' src='/image/guide.png'></image>
 </view>
 
 
 <!--列表  B-->
-<view hidden='{{cpage !== "bigL"}}'>
+<view hidden='{{cpage !== "index"}}'  >
   <view class='bigL'>
     <view class='b_top'>喜欢ta，就投ta</view>
     <view class='b_main'>
@@ -178,7 +178,7 @@
 <!--列表  E-->
 
 <!--四分之一 B -->
-<view hidden='{{cpage !== "bigL"}}'>
+<view hidden='{{cpage !== "quarter"}}'   >
   <view class='quarter_top'>二选一,看你的眼光了</view>
   <view class='quarter_main'>
     <image src='../../image/left.png' class='quarter_left b_direction'></image>
@@ -291,7 +291,7 @@
 <!--四分之一 E -->
 
 <!--半决赛 B -->
-<view hidden='{{cpage !== "bigL"}}'>
+<view hidden='{{cpage !== "final"}}' >
   <view class='quarter_top'>二选一,看你的眼光了</view>
   <view class='quarter_main'>
     <image src='../../image/left.png' class='quarter_left b_direction'></image>
@@ -408,11 +408,11 @@
 <!--半决赛 E  -->
 
 <!--大结局 B  -->
-<view hidden='{{}}'>
+<view hidden='{{cpage !=="end"}}'  >
   <view class='bigL '>
-  <view class='endheight '></view>
+    <view class='endheight '></view>
     <view class='b_main'>
-      <image src='../../image/left.png' class='b_left b_direction'></image>
+      <image src='../../image/left.png' class='end_left b_direction'></image>
       <scroll-view scroll-x="true">
         <view class='end_lists' style='heigth:100%;'>
           <view class='end_list' scroll-x="true">
@@ -424,14 +424,20 @@
                 <image src='../../image/news.png' class='b_news'></image>
               </view>
               <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='end_bigName'>大名单 <text> 1299</text>	</view>
-               <view class='end_bigName'>四分一 <text> 1299</text>	</view>
-                <view class='end_bigName'>半决赛 <text> 1299</text>	</view>
-                 <view class='end_bigName'>总决赛 <text> 1299</text>	</view>
+              <view class='end_name'>齐达内</view>
+              <view class='end_bigName'>大名单
+                <text> 1299</text> </view>
+              <view class='end_bigName'>四分一
+                <text> 1299</text> </view>
+              <view class='end_bigName'>半决赛
+                <text> 1299</text> </view>
+              <view class='end_bigName'>总决赛
+                <text> 1299</text> </view>
+                <view class='end_sum'>77990</view>
             </view>
           </view>
-          <view class='b_list' scroll-x="true">
+          <view class='end_list' scroll-x="true">
+            <image src='../../image/1st.png' class='numImg'></image>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -439,15 +445,20 @@
                 <image src='../../image/news.png' class='b_news'></image>
               </view>
               <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
+              <view class='end_name'>齐达内</view>
+              <view class='end_bigName'>大名单
+                <text> 1299</text> </view>
+              <view class='end_bigName'>四分一
+                <text> 1299</text> </view>
+              <view class='end_bigName'>半决赛
+                <text> 1299</text> </view>
+              <view class='end_bigName'>总决赛
+                <text> 1299</text> </view>
+                <view class='end_sum'>77990</view>
             </view>
           </view>
-          <view class='b_list' scroll-x="true">
+          <view class='end_list' scroll-x="true">
+            <image src='../../image/1st.png' class='numImg'></image>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -455,15 +466,20 @@
                 <image src='../../image/news.png' class='b_news'></image>
               </view>
               <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
+              <view class='end_name'>齐达内</view>
+              <view class='end_bigName'>大名单
+                <text> 1299</text> </view>
+              <view class='end_bigName'>四分一
+                <text> 1299</text> </view>
+              <view class='end_bigName'>半决赛
+                <text> 1299</text> </view>
+              <view class='end_bigName'>总决赛
+                <text> 1299</text> </view>
+                <view class='end_sum'>77990</view>
             </view>
           </view>
-          <view class='b_list' scroll-x="true">
+          <view class='end_list' scroll-x="true">
+            <image src='../../image/1st.png' class='numImg'></image>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -471,32 +487,57 @@
                 <image src='../../image/news.png' class='b_news'></image>
               </view>
               <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
+              <view class='end_name'>齐达内</view>
+              <view class='end_bigName'>大名单
+                <text> 1299</text> </view>
+              <view class='end_bigName'>四分一
+                <text> 1299</text> </view>
+              <view class='end_bigName'>半决赛
+                <text> 1299</text> </view>
+              <view class='end_bigName'>总决赛
+                <text> 1299</text> </view>
+                <view class='end_sum'>77990</view>
             </view>
           </view>
         </view>
       </scroll-view>
-      <image src='../../image/right.png' class='b_right b_direction'></image>
+      <image src='../../image/right.png' class='end_right b_direction'></image>
     </view>
-
-    <view class='b_time'>
-      <text>今晚八点公布八强名单</text>
+    <view class='end_center'>
+      <view class='end_one'>
+            <view class='display fl'>
+              <image src='../../image/tijiao.png' class='end_img'></image>
+              <text class='end_number'>21371人参与</text>
+          </view> 
+          <view class='display fr'>
+            <text class='end_number pr'>共投票23112张</text>
+            <image src='../../image/piaoshu.png' class='end_img'></image>          
+          </view> 
+      </view>
+        <view class=' end_one'>
+            <view class='display fl'>
+              <image src='../../image/zhuwei.png' class='end_img'></image>
+              <text class='end_number'>共投票23112张</text>
+          </view> 
+          <view class='display fr'>
+            <text class='end_number pr'>共投入1243110筹码</text>
+            <image src='../../image/chouma.png' class='end_img'></image>          
+          </view> 
+      </view>
+    
     </view>
+    
   </view>
   <view class='b_bottom'>
+  <view class='quarter_time'>
+      <text>大奖获得者：米开朗基罗</text>
+    </view>
     <view>
       <image src='{{userInfo.avatarUrl}}' class='b_btm_img'></image>
-      <text class='display b_btm_num'>共投出12票</text>
+      <text class='display b_btm_num'>你获得了第20名</text>
     </view>
-    <view class='b_btoR'>
-      <text>加入投ta粉丝群</text>
-      <image src='../../image/1.jpg' class='b_btoImg'></image>
-    </view>
+     <view class='bottom_btns'>查看排名</view>
+      <view class='bottom_btn'>成绩一览</view>
   </view>
 </view>
 <!--大结局 E -->
