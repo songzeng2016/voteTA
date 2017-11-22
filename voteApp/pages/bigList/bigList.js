@@ -28,6 +28,15 @@ Page({
     }
     this.setData({ cpage, guideLeft })
   },
+
+  goDetail(){
+    wx.navigateTo({
+      url: '../details/details',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
