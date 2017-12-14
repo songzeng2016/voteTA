@@ -56,14 +56,14 @@ App({
                 },
                 success: res => {
                   wx.request({
-                    url: 'http://123.57.227.176:8080//app/vote/get_voteinfo_list.action',
+                    url: 'http://123.57.227.176:8080/app/vote/get_total_ranked_list.action',
                     data: {
                       'pageSize': 0,
                       'pageOffset': 10
                     },
                     header: {
-                      'cookie': 'sessionId=' + res.data.result.sessionId,
-                      // 'sessionId': res.data.result.sessionId
+                      // 'cookie': 'sessionId=' + res.data.result.sessionId,
+                      'sessionId': res.data.result.sessionId
                     },
                     success: res => {
 
