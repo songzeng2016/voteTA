@@ -87,15 +87,27 @@ Page({
     }
     this.setData({ cpage, guideLeft })
   },
-  golist(){
+  golist() {
     wx.navigateTo({
       url: '../bigList/bigList',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
   onLoad: function () {
+
+    // wx.request({
+    //   url: 'http://123.57.227.176:8080//app/vote/get_voteinfo_list.action',
+    //   data: {
+    //     'pageSize': 0,
+    //     'pageOffset': 10
+    //   },
+    //   success: res => {
+
+    //   }
+    // })
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
