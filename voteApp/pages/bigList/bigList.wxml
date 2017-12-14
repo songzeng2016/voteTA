@@ -17,7 +17,7 @@
       <image src='../../image/left.png' class='b_left b_direction'></image>
       <scroll-view scroll-x="true">
         <view class='b_lists'>
-          <view class='b_list' scroll-x="true">
+          <view class='b_list' scroll-x="true" bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -33,7 +33,7 @@
               </view>
             </view>
           </view>
-          <view class='b_list' scroll-x="true">
+          <view class='b_list' scroll-x="true" bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -49,7 +49,7 @@
               </view>
             </view>
           </view>
-          <view class='b_list' scroll-x="true">
+          <view class='b_list' scroll-x="true" bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -90,7 +90,7 @@
       <image src='../../image/left.png' class='b_left b_direction'></image>
       <scroll-view scroll-x="true">
         <view class='b_lists'>
-          <view class='b_list' scroll-x="true">
+          <view class='b_list' scroll-x="true" bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -106,7 +106,7 @@
               </view>
             </view>
           </view>
-          <view class='b_list' scroll-x="true">
+          <view class='b_list' scroll-x="true" bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -185,7 +185,7 @@
     <scroll-view scroll-x="true">
       <view class='quarter_lists' scroll-x="true" style='height:460rpx'>
         <view class='quarter_one'>
-          <view class='quarter_list'>
+          <view class='quarter_list'bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -203,7 +203,7 @@
           </view>
           <view class='vs'>VS</view>
           <view class='quarter_group'>第二组</view>
-          <view class='quarter_list'>
+          <view class='quarter_list' bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -221,7 +221,7 @@
           </view>
         </view>
         <view class='quarter_one'>
-          <view class='quarter_list'>
+          <view class='quarter_list' bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -298,7 +298,7 @@
     <scroll-view scroll-x="true" style="height: 460rpx;">
       <view class='quarter_lists' scroll-x="true">
         <view class='quarter_one'>
-          <view class='quarter_list'>
+          <view class='quarter_list' bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -334,7 +334,7 @@
           </view>
         </view>
         <view class='quarter_one'>
-          <view class='quarter_list'>
+          <view class='quarter_list' bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -411,11 +411,11 @@
 <view hidden='{{cpage !=="end"}}'  >
   <view class='bigL '>
     <view class='endheight '></view>
-    <view class='b_main'>
+    <view class='end_main'>
       <image src='../../image/left.png' class='end_left b_direction'></image>
       <scroll-view scroll-x="true" style="height: 560rpx;">
-        <view class='end_lists' style='heigth:100%;'>
-          <view class='end_list' scroll-x="true">
+        <view class='end_lists' >
+          <view class='end_list' scroll-x="true" bindtap='goDetail'>
             <image src='../../image/1st.png' class='numImg'></image>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
@@ -457,7 +457,7 @@
                 <view class='end_sum'>77990</view>
             </view>
           </view>
-          <view class='end_list' scroll-x="true">
+          <view class='end_list' scroll-x="true" bindtap='goDetail'>
             <image src='../../image/1st.png' class='numImg'></image>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
@@ -478,7 +478,7 @@
                 <view class='end_sum'>77990</view>
             </view>
           </view>
-          <view class='end_list' scroll-x="true">
+          <view class='end_list' scroll-x="true" bindtap='goDetail'>
             <image src='../../image/1st.png' class='numImg'></image>
             <view class='b_content display'>
               <view class='b_mark'>1</view>

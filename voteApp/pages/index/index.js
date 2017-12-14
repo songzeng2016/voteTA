@@ -87,7 +87,14 @@ Page({
     }
     this.setData({ cpage, guideLeft })
   },
-
+  golist(){
+    wx.navigateTo({
+      url: '../bigList/bigList',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
