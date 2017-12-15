@@ -1,19 +1,28 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
+const [host, status, errmsg] = ['http://123.57.227.176:8080/', 'STATUS', 'ERRMSG']
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+class wc {
+  constructor() {
+    this.host = host
+    this.status = status
+  }
+
+  get(sessionId, url, data, success) {
+    wx.request({
+      url: this.host + url,
+      data,
+      header: {
+        'Cookie': 'sessionId=' + sessionId,
+        'sessionId': sessionId
+      },
+      success: res => {
+        if (res.data[status] === '0') {
+          typeof success === 'function' && success(res.data)
+        } else {
+          console.log(res.data[errmsg])
+        }
+      }
+    })
+  }
 }
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
-
-module.exports = {
-  formatTime: formatTime
-}
+export default wc

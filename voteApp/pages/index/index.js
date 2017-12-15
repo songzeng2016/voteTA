@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 
+const { wc } = app
+
 Page({
   data: {
     cpage: 'index',
@@ -96,17 +98,20 @@ Page({
     })
   },
   onLoad: function () {
+    console.log(app.globalData)
+    wc.get('', 'app/vote/register.action', app.globalData.loginData, json => {
+      wx.setStorageSync('sessionId', json.sessionId)
+      // app.sessionId = wx.getStorageSync('sessionId')
+      // app.sessionId = json.sessionId
+      // let getData = {
+      //   'pageSize': 0,
+      //   'pageOffset': 10
+      // }
+      // console.log(app.sessionId)
+      // wc.get(app.sessionId, 'app/vote/get_voteinfo_list.action', getData, json => {
 
-    // wx.request({
-    //   url: 'http://123.57.227.176:8080//app/vote/get_voteinfo_list.action',
-    //   data: {
-    //     'pageSize': 0,
-    //     'pageOffset': 10
-    //   },
-    //   success: res => {
-
-    //   }
-    // })
+      // })
+    })
 
     if (app.globalData.userInfo) {
       this.setData({
