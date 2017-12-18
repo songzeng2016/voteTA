@@ -74,32 +74,13 @@
       <view class='notice'>每一次参与，都是知识沉淀的过程。</view>
       <view class='content'>
 
-        <view class='iList' bindtap='golist'>
+        <view class='iList' wx:for='{{voteList}}' wx:key='*voteList' data-id='{{item.id}}' bindtap='golist'>
           <view>
-            <view>VOL.12</view>
-            <view>谁是足坛王者</view>
-            <view>半决赛进行中，2313人参与</view>
+            <view>VOL.{{item.id}}</view>
+            <view>{{item.voteTitle}}</view>
+            <view>{{item.voteDesc}}，{{item.visitNumber}}人参与</view>
             <view>
-              <image class='prizeImg' src='/image/prize.png'></image>
-              <image class='prizeImg' src='/image/prize.png'></image>
-              <image class='prizeImg' src='/image/prize.png'></image>
-            </view>
-          </view>
-          <view>
-            <image class='prizeImg' src='/image/prize.png'></image>
-            <text class='prizeText'>奖</text>
-          </view>
-        </view>
-        <view class='iList' bindtap='golist'>
-          <view>
-            <view>VOL.12</view>
-            <view>谁是足坛王者</view>
-            <view>半决赛进行中，2313人参与</view>
-            <view>
-              <image class='prizeImg' src='/image/prize.png'></image>
-              <image class='prizeImg' src='/image/prize.png'></image>
-              <image class='prizeImg' src='/image/prize.png'></image>
-              <image class='prizeImg' src='/image/prize.png'></image>
+              <image class='prizeImg' wx:for='{{item.votePeopleInfoList}}' wx:for-item='subItem' wx:key='*voteSubItem' src='{{subItem.votePeoplePic}}' data-id='{{subItem.id}}'></image>
             </view>
           </view>
           <view>

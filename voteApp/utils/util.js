@@ -16,13 +16,18 @@ class wc {
       },
       success: res => {
         if (res.data[status] === '0') {
-          typeof success === 'function' && success(res.data)
+          typeof success === 'function' && success(res.data.result)
         } else {
           console.log(res.data[errmsg])
         }
       }
     })
   }
+
+  navigateTo(url) {
+    wx.navigateTo({ url })
+  }
+
 }
 
 export default wc

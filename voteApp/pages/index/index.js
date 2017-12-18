@@ -89,63 +89,72 @@ Page({
     }
     this.setData({ cpage, guideLeft })
   },
-  golist() {
-    wx.navigateTo({
-      url: '../bigList/bigList',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
+  // 查看投票详情
+  golist: function (e) {
+    let id = e.currentTarget.dataset.id
+    wc.navigateTo('/pages/bigList/bigList?id=' + id)
   },
   onLoad: function () {
-    console.log(app.globalData)
-    wc.get('', 'app/vote/register.action', app.globalData.loginData, json => {
-      wx.setStorageSync('sessionId', json.sessionId)
-      // app.sessionId = wx.getStorageSync('sessionId')
-      // app.sessionId = json.sessionId
-      // let getData = {
-      //   'pageSize': 0,
-      //   'pageOffset': 10
-      // }
-      // console.log(app.sessionId)
-      // wc.get(app.sessionId, 'app/vote/get_voteinfo_list.action', getData, json => {
-
-      // })
-    })
-
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+    const that = this
+    // 登录
+    let getData = {}
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        getData.thirdPartyMark = res.code
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
+    })
+    // 获取用户信息
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              let userInfo = res.userInfo
+              getData.nickname = userInfo.nickName
+              getData.gender = userInfo.gender
+              getData.picUrl = userInfo.avatarUrl
+
+              // 可以将 res 发送给后台解码出 unionId
+              app.globalData.userInfo = res.userInfo
+
+              that.setData({ userInfo })
+
+              wc.get('', 'app/vote/register.action', getData, json => {
+                app.sessionId = json.sessionId
+
+                that.getVoteList()
+              })
+
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (app.userInfoReadyCallback) {
+                app.userInfoReadyCallback(res)
+              }
+            }
           })
         }
-      })
-    }
+      }
+    })
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  // 获取投票列表
+  getVoteList: function () {
+    const that = this
+    let voteDesc = ['已经结束', '大名单正在进行中', '四分之一正在进行中', '半决赛进行中', '决赛进行中']
+    let getData = {
+      'pageSize': 0,
+      'pageOffset': 10
+    }
+
+    wc.get(app.sessionId, 'app/vote/get_voteinfo_list.action', getData, json => {
+      let voteList = json
+
+      voteList.forEach((item, i) => {
+        item.voteDesc = voteDesc[item.voteStatus]
+      })
+
+      that.setData({ voteList })
     })
   }
 })
