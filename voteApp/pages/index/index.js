@@ -121,10 +121,12 @@ Page({
 
               that.setData({ userInfo })
 
-              wc.get('', 'app/vote/register.action', getData, json => {
+              wc.get('', '/app/vote/register.action', getData, json => {
                 app.sessionId = json.sessionId
 
                 that.getVoteList()
+                // that.getGradeList()
+                // that.getRankingList()
               })
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -147,7 +149,7 @@ Page({
       'pageOffset': 10
     }
 
-    wc.get(app.sessionId, 'app/vote/get_voteinfo_list.action', getData, json => {
+    wc.get(app.sessionId, '/app/vote/get_voteinfo_list.action', getData, json => {
       let voteList = json
 
       voteList.forEach((item, i) => {
@@ -155,6 +157,30 @@ Page({
       })
 
       that.setData({ voteList })
+    })
+  },
+  // 获取等级列表
+  getGradeList: function () {
+    const that = this
+
+    wc.get(app.sessionId, '/app/vote/get_vote_level_list.action', {}, json => {
+      let voteList = json
+
+      // that.setData({ voteList })
+    })
+  },
+  // 获取排名列表
+  getRankingList: function () {
+    const that = this
+    let getData = {
+      'pageSize': 0,
+      'pageOffset': 10
+    }
+
+    wc.get(app.sessionId, '/app/vote/get_total_ranked_list.action', getData, json => {
+      let voteList = json
+
+      // that.setData({ voteList })
     })
   }
 })
