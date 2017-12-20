@@ -1,10 +1,10 @@
 <!-- header -->
 <view class='header'>
-  <view class=' flex' catchtap='navTab' data-index='1'  data-cpage='index'>大名单</view>
-  <view class='quarter flex' catchtap='navTab' data-index='2' data-cpage='quarter'>四分之一</view>
-  <view class='semifinalsbh flex' catchtap='navTab' data-index='3'  data-cpage='final'>半决赛</view>
-  <view class='final flex' catchtap='navTab' data-index='4'>总决赛</view>
-  <view class='end flex' catchtap='navTab' data-index='0' data-cpage='end'>大结局</view>
+  <view class=' flex'  data-index='1'  data-cpage='index'>大名单</view>
+  <view class='quarter flex' data-index='2' data-cpage='quarter'>四分之一</view>
+  <view class='semifinalsbh flex'  data-index='3'  data-cpage='final'>半决赛</view>
+  <view class='final flex'  data-index='4' >总决赛</view>
+  <view class='end flex'  data-index='0' data-cpage='end'>大结局</view>
   <image class='guide' style='left: {{guideLeft}}rpx' src='/image/guide.png'></image>
 </view>
 
@@ -285,7 +285,6 @@
 
   </view>
 </view>
-
 <!--半决赛 E  -->
 
 <!--大结局 B  -->

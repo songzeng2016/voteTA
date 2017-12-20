@@ -14,20 +14,20 @@ Page({
   // 导航切换
   navTab: function (e) {
     let data = e.currentTarget.dataset
-    console.log(data)
+    // console.log(data)
     let { cpage, index } = data
     let guideLeft = this.data.guideLeft || ''
-
+    index = this.data.index
     // 位置计算
     if (index == 1) {
-      guideLeft = 24 
+      guideLeft = 24
     } else if (index == 2) {
       guideLeft = 185
     } else if (index == 3) {
       guideLeft = 340
-    } else if (index == 4){
-      guideLeft = 490 
-    } else if(index == 0){
+    } else if (index == 4) {
+      guideLeft = 490
+    } else if (index == 0) {
       guideLeft = 640
     }
     this.setData({ cpage, guideLeft })
@@ -48,10 +48,31 @@ Page({
     const that = this
     let id = options.id
     let status = options.status
-    
-    this.data.index  = status
+    let index = status - 1
+    let cpage = 'index'
+    let guideLeft = 0
 
-    console.log("status" + this.data.index )
+    if (index == 0) {
+      guideLeft = 24
+      cpage = 'index'
+    } else if (index == 1) {
+      guideLeft = 185
+      cpage = 'quarter'
+    } else if (index == 2) {
+      guideLeft = 340
+      cpage = 'final'
+    } else if (index == 3) {
+      guideLeft = 490
+      cpage = 'navTab'
+    } else if (index == 4) {
+      guideLeft = 640
+      cpage = 'end'
+    }
+    this.setData({ cpage, guideLeft })
+
+    // this.data.index  = status
+
+    console.log("status" + status )
     let getData = {
       pageSize: 0,
       pageOffset: 100,
