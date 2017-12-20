@@ -79,6 +79,18 @@ Page({
     let { cpage, index } = data
     let guideLeft = this.data.guideLeft || ''
 
+    switch (cpage) {
+      case 'grade':
+        !this.data.gradeList && this.getGradeList()
+        break;
+      case 'ranking':
+        !this.data.rankingList && this.getRankingList()
+        break;
+      case 'score':
+        !this.data.scoreList && this.getScoreList()
+        break;
+    }
+
     // 位置计算
     if (index < 2) {
       guideLeft = 24 + index * 145
@@ -164,9 +176,9 @@ Page({
     const that = this
 
     wc.get(app.sessionId, '/app/vote/get_vote_level_list.action', {}, json => {
-      let voteList = json
+      let gradeList = json
 
-      // that.setData({ voteList })
+      that.setData({ gradeList })
     })
   },
   // 获取排名列表
@@ -178,9 +190,23 @@ Page({
     }
 
     wc.get(app.sessionId, '/app/vote/get_total_ranked_list.action', getData, json => {
-      let voteList = json
+      let rankingList = json
 
-      // that.setData({ voteList })
+      that.setData({ rankingList })
+    })
+  },
+  // 获取成绩列表
+  getScoreList: function () {
+    const that = this
+    let getData = {
+      'voteInfoId': '',
+      'votePeopleInfoId': ''
+    }
+
+    wc.get(app.sessionId, '/app/vote/get_vote_achievement_list.action', getData, json => {
+      let scoreList = json
+
+      that.setData({ scoreList })
     })
   }
 })

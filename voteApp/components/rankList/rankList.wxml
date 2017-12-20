@@ -1,0 +1,15 @@
+<!--components/rankList/rankList.wxml-->
+<view class='rankList' wx:for='{{list}}' wx:key='*list'>
+  <view class='iconWrapper'>
+    <image class='avatar' src='{{item.userPic}}'></image>
+    <view>
+      <text>{{item.userName}}</text>
+      <!-- <template is='capsule' data='{{item}}' /> -->
+      <capsule item='{{item}}'></capsule>
+    </view>
+  </view>
+  <image class='icon' src='/image/1st.png'></image>
+  <!-- <text>250</text>  -->
+</view>
+
+<!-- <slot></slot> -->

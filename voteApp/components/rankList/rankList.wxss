@@ -1,0 +1,30 @@
+/* components/rankList/rankList.wxss */
+
+/* 排名列表 */
+
+.rankList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23rpx 0 17rpx 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.rankList .iconWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.rankList .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 14rpx;
+  border-radius: 50%;
+}
+
+.rankList .icon {
+  width: 38rpx;
+  height: 38rpx;
+}

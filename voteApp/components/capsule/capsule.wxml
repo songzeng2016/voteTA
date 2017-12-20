@@ -1,0 +1,6 @@
+<!--components/capsule/capsule.wxml-->
+<!-- 胶囊 -->
+<view class='capsule'>
+  <view class='left' style='background: {{item.lbgc}};'>{{item.rankNumber}}</view>
+  <view class='right' style='background: {{item.rbgc}};'>{{item.integral}}</view>
+</view>

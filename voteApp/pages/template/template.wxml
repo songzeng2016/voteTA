@@ -12,7 +12,7 @@
 <template name='rankList'>
   <view class='rankList'>
     <view class='iconWrapper'>
-      <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+      <image class='avatar' src='{{}}'></image>
       <view>
         <text>{{userInfo.nickName}}</text>
         <template is='capsule' data='{{item}}' />

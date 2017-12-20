@@ -98,7 +98,9 @@
     <view class='ranking' hidden='{{cpage !== "ranking"}}'>
       <view class='notice'>全部排名</view>
       <view class='content'>
-        <template is='rankList' data='{{userInfo}}' />
+         <rank-list list='{{rankingList.voteRankInfoList}}'></rank-list> 
+        <!-- <component-tag-name inner-text="Some text"></component-tag-name> -->
+        <!-- <template is='rankList' data='{{rankingList.voteRankInfoList[0]}}' /> -->
         <template is='rankList' data='{{userInfo}}' />
       </view>
     </view>

@@ -1,0 +1,24 @@
+/* components/capsule/capsule.wxss */
+
+/* 胶囊 */
+
+.capsule {
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.capsule .left {
+  padding: 9rpx 13rpx 9rpx 20rpx;
+  background: #808080;
+  border-radius: 25rpx 0 0 25rpx;
+  border-right: 1px solid #e6e6e6;
+}
+
+.capsule .right {
+  padding: 9rpx 20rpx 9rpx 16rpx;
+  background: #b2b2b2;
+  border-radius: 0 25rpx 25rpx 0;
+}
