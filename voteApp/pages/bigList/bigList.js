@@ -1,4 +1,6 @@
 const app = getApp()
+
+const { wc } = app
 Page({
 
   /**
@@ -17,63 +19,52 @@ Page({
     let guideLeft = this.data.guideLeft || ''
 
     // 位置计算
-    if (index < 2) {
-      guideLeft = 24 + index * 145
+    if (index == 1) {
+      guideLeft = 24 
     } else if (index == 2) {
-      guideLeft = 340
+      guideLeft = 185
     } else if (index == 3) {
-      guideLeft = 485
-    } else {
-      guideLeft = 500 + (index - 3) * 140
+      guideLeft = 340
+    } else if (index == 4){
+      guideLeft = 490 
+    } else if(index == 0){
+      guideLeft = 640
     }
     this.setData({ cpage, guideLeft })
   },
-
-  goDetail(){
+  //跳转详情页
+  goDetail() {
     wx.navigateTo({
       url: '../details/details',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
+    const that = this
+    let id = options.id
+    let status = options.status
+    
+    this.data.index  = status
+
+    console.log("status" + this.data.index )
+    let getData = {
+      pageSize: 0,
+      pageOffset: 100,
+      voteInfoId: id,
+      voteStatus: status
     }
-  },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+
+    wc.get(app.sessionId, '/app/vote/get_votepeopleinfo_list.action', getData, json => {
+      let bigList = json
+
+      console.log(bigList)
+      that.setData({ bigList })
+
     })
   },
 
@@ -81,48 +72,48 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

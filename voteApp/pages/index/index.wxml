@@ -74,7 +74,7 @@
       <view class='notice'>每一次参与，都是知识沉淀的过程。</view>
       <view class='content'>
 
-        <view class='iList' wx:for='{{voteList}}' wx:key='*voteList' data-id='{{item.id}}' bindtap='golist'>
+        <view class='iList' wx:for='{{voteList}}' wx:key='*voteList' data-id='{{item.id}}' data-status='{{item.voteStatus}}' bindtap='golist'>
           <view>
             <view>VOL.{{item.id}}</view>
             <view>{{item.voteTitle}}</view>

@@ -91,8 +91,8 @@ Page({
   },
   // 查看投票详情
   golist: function (e) {
-    let id = e.currentTarget.dataset.id
-    wc.navigateTo('/pages/bigList/bigList?id=' + id)
+    let data = e.currentTarget.dataset
+    wc.navigateTo('/pages/bigList/bigList?id=' + data.id + '&status=' + data.status)
   },
   onLoad: function () {
     const that = this

@@ -6,10 +6,10 @@ page{background: #E5E5E5;}
 .fff{color: #fff;}
 /*列表  B*/
 .b_top{color: #7F7F7F;height: 40rpx;line-height: 75rpx;font-size: 28rpx;}
-.bigL{padding: 0 40rpx;}
+.bigL{padding: 0 40rpx 180rpx 40rpx;}
 .b_main{position: relative;padding-top: 30rpx;}
-.b_lists{height: 400rpx;width: 100%; display: flex; display: -webkit-box; flex-direction: column;}   
-.b_list{width: 200rpx;height: 400rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;flex: 1;margin-right: 34rpx;}
+ .b_lists{width: 750rpx;}    
+.b_list{display: inline-block; width: 200rpx;height: 400rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;flex: 1;margin-right: 34rpx; margin-top: 25rpx;}
 .b_mark{width: 24rpx;height: 24rpx;border-radius: 50%;background: #000;font-size: 18rpx;color: #fff;line-height: 24rpx;text-align: center;position: relative;top: 8rpx;left: 8rpx;}
 .news{font-size: 18rpx;color: #B2B2B2;position: absolute;right: 20rpx;top: 8rpx;vertical-align: bottom;}
 .b_news{width: 20rpx;height: 20rpx;vertical-align: bottom;padding-left: 10rpx;}
