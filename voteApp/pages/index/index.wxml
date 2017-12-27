@@ -6,11 +6,11 @@
   <view class='header'>
     <view class='navList' catchtap='navTab' data-cpage='chip' data-index='0'>
       <view class='type color_1'>筹码</view>
-      <text class='desc'>2320</text>
+      <text class='desc'>{{myInfo.chipNumber}}</text>
     </view>
     <view class='navList' catchtap='navTab' data-cpage='grade' data-index='1'>
       <view class='type color_2'>等级</view>
-      <text class='desc'>一级</text>
+      <text class='desc'>{{myInfo.voteLevel}}</text>
     </view>
     <view class='navList' catchtap='navTab' data-cpage='index' data-index='2'>
       <image class='type avatar' src='{{userInfo.avatarUrl}}'></image>
@@ -18,11 +18,11 @@
     </view>
     <view class='navList' catchtap='navTab' data-cpage='ranking' data-index='3'>
       <view class='type color_3'>排名</view>
-      <text class='desc'>254</text>
+      <text class='desc'>{{myInfo.ranking}}</text>
     </view>
     <view class='navList' catchtap='navTab' data-cpage='score' data-index='4'>
       <view class='type color_4'>成绩</view>
-      <text class='desc'>8756</text>
+      <text class='desc'>{{myInfo.integralNumber}}</text>
     </view>
 
     <image class='guide' style='left: {{guideLeft}}rpx' src='/image/guide.png'></image>
@@ -99,9 +99,7 @@
       <view class='notice'>全部排名</view>
       <view class='content'>
          <rank-list list='{{rankingList.voteRankInfoList}}'></rank-list> 
-        <!-- <component-tag-name inner-text="Some text"></component-tag-name> -->
-        <!-- <template is='rankList' data='{{rankingList.voteRankInfoList[0]}}' /> -->
-        <template is='rankList' data='{{userInfo}}' />
+        <!-- <template is='rankList' data='{{userInfo}}' /> -->
       </view>
     </view>
 

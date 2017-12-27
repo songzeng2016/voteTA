@@ -136,6 +136,10 @@ Page({
               wc.get('', '/app/vote/register.action', getData, json => {
                 app.sessionId = json.sessionId
 
+                that.setData({  // 更新我的信息
+                  myInfo: json
+                })
+
                 that.getVoteList()
                 // that.getGradeList()
                 // that.getRankingList()
