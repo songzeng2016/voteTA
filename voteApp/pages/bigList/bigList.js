@@ -48,23 +48,23 @@ Page({
     const that = this
     let id = options.id
     let status = options.status
-    let index = status - 1
+    let index = status
     let cpage = 'index'
     let guideLeft = 0
 
-    if (index == 0) {
+    if (index == 1) {
       guideLeft = 24
       cpage = 'index'
-    } else if (index == 1) {
+    } else if (index == 2) {
       guideLeft = 185
       cpage = 'quarter'
-    } else if (index == 2) {
+    } else if (index == 3) {
       guideLeft = 340
       cpage = 'final'
-    } else if (index == 3) {
+    } else if (index == 4) {
       guideLeft = 490
       cpage = 'navTab'
-    } else if (index == 4) {
+    } else if (index == 0) {
       guideLeft = 640
       cpage = 'end'
     }
