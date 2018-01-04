@@ -182,6 +182,11 @@ Page({
     wc.get(app.sessionId, '/app/vote/get_vote_level_list.action', {}, json => {
       let gradeList = json
 
+      gradeList.forEach((item, i) => {
+        item.rankNumber = item.levelName
+        item.integral = `${item.levelScore}-${item.levelScoreEnd}`
+      })
+
       that.setData({ gradeList })
     })
   },

@@ -57,8 +57,11 @@
       <view class='notice'>天下才共八斗，学共五车，你的级别如何呢？</view>
       <view class='content'>
         <view class='leftList'>
-          <block wx:for='{{grade.leftList}}' wx:key='*grade.leftList'>
-            <template is='capsule' data='{{item}}' />
+          <block wx:for='{{gradeList}}' wx:key='*grade.leftList'>
+            <!-- <template is='capsule' data='{{item}}' /> -->
+            <view class='capsuleWrapper'>
+              <capsule item='{{item}}'></capsule>
+            </view>
           </block>
         </view>
         <view class='rightList'>
@@ -98,7 +101,7 @@
     <view class='ranking' hidden='{{cpage !== "ranking"}}'>
       <view class='notice'>全部排名</view>
       <view class='content'>
-         <rank-list list='{{rankingList.voteRankInfoList}}'></rank-list> 
+        <rank-list list='{{rankingList.voteRankInfoList}}'></rank-list>
         <!-- <template is='rankList' data='{{userInfo}}' /> -->
       </view>
     </view>

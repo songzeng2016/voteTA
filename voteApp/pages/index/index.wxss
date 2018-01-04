@@ -126,7 +126,7 @@ page, .wrapper {
   padding: 60rpx 90rpx 0;
 }
 
-.grade .capsule {
+.grade .capsuleWrapper {
   margin-bottom: 25rpx;
 }
 

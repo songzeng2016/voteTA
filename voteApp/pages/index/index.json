@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "rank-list": "/components/rankList/rankList"
+    "rank-list": "/components/rankList/rankList",
+    "capsule": "/components/capsule/capsule"
   }
 }
