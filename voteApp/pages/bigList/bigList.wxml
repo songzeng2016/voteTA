@@ -16,12 +16,12 @@
     <view class='b_main'>
     
       <!-- <scroll-view scroll-x="true"> -->
-        <view class='b_lists' wx:for="{{bigList.votePeopleInfoList}}" wx:key='*votePeopleInfoList'>
-          <view class='b_list' scroll-x="true" bindtap='goDetail'>
+        <view class='b_lists' >
+          <view class='b_list' wx:for="{{bigList.votePeopleInfoList}}" wx:key='*votePeopleInfoList' scroll-x="true" bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>{{index+1}}</view>
               <view class='news display'>
-                <text class='display'>{{item.commentNumber}}</text>
+                <text class='display'>{{item.commentNumber||0}}</text>
                 <image src='../../image/news.png' class='b_news'></image>
               </view>
               <image src='{{item.votePeoplePic}}' class='b_head'></image>
@@ -64,9 +64,9 @@
   <view class='quarter_main'>
     <image src='../../image/left.png' class='quarter_left b_direction'></image>
     <scroll-view scroll-x="true">
-      <view class='quarter_lists' scroll-x="true" style='height:460rpx'>
+      <view class='quarter_lists'  scroll-x="true" style='height:460rpx'>
         <view class='quarter_one'>
-          <view class='quarter_list'bindtap='goDetail'>
+          <view class='quarter_list'bindtap='goDetail' >
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -101,41 +101,7 @@
             </view>
           </view>
         </view>
-        <view class='quarter_one'>
-          <view class='quarter_list' bindtap='goDetail'>
-            <view class='b_content display'>
-              <view class='b_mark'>1</view>
-              <view class='news display'>
-                <text class='display'>12</text>
-                <image src='../../image/news.png' class='b_news'></image>
-              </view>
-              <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
-            </view>
-          </view>
-          <view class='vs'>VS</view>
-          <view class='quarter_list'>
-            <view class='b_content display'>
-              <view class='b_mark'>1</view>
-              <view class='news display'>
-                <text class='display'>12</text>
-                <image src='../../image/news.png' class='b_news'></image>
-              </view>
-              <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
-            </view>
-          </view>
-        </view>
+      
       </view>
     </scroll-view>
     <image src='../../image/right.png' class='quarter_right b_direction'></image>
@@ -161,7 +127,7 @@
     </view>
     <view>
       <image src='{{userInfo.avatarUrl}}' class='b_btm_img'></image>
-      <text class='display b_btm_num'>共投出12票</text>
+      <text class='display b_btm_num'>共投出{{mineTotalVoteNumber}}票</text>
     </view>
     <view class='b_btoR'>
       <text>加入投ta粉丝群</text>
@@ -300,7 +266,7 @@
             <view class='b_content display'>
               <view class='b_mark'>{{index+1}}</view>
               <view class='news display'>
-                <text class='display'>{{item.commentNumber}}</text>
+                <text class='display'>{{item.commentNumber||0}}</text>
                 <image src='../../image/news.png' class='b_news'></image>
               </view>
               <image src='{{item.votePeoplePic}}' class='b_head'></image>

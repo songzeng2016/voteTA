@@ -82,9 +82,10 @@ Page({
 
     wc.get(app.sessionId, '/app/vote/get_votepeopleinfo_list.action', getData, json => {
       let bigList = json
-
+      let mineTotalVoteNumber = bigList.mineTotalVoteNumber
+      let mineTotalChipNumber = bigList.mineTotalChipNumber
       console.log(bigList)
-      that.setData({ bigList })
+      that.setData({ bigList, mineTotalVoteNumber, mineTotalChipNumber })
 
     })
   },
