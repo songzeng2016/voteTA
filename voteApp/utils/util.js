@@ -17,6 +17,8 @@ class wc {
       success: res => {
         if (res.data[status] === '0') {
           typeof success === 'function' && success(res.data.result)
+        } else if (res.data[status] === '2') {
+          console.log('msg: 结果为空')
         } else {
           console.log(res.data[errmsg])
         }

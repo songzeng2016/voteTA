@@ -33,9 +33,10 @@ Page({
     this.setData({ cpage, guideLeft })
   },
   //跳转详情页
-  goDetail() {
+  goDetail(e) {
+    let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../details/details',
+      url: `../details/details?id=${id}`,
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },
@@ -72,7 +73,7 @@ Page({
 
     // this.data.index  = status
 
-    console.log("status" + status )
+    console.log("status" + status)
     let getData = {
       pageSize: 0,
       pageOffset: 100,

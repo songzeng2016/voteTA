@@ -1,42 +1,42 @@
 <!-- header -->
 <view class='header'>
-  <view class=' flex'  data-index='1'  data-cpage='index'>大名单</view>
+  <view class=' flex' data-index='1' data-cpage='index'>大名单</view>
   <view class='quarter flex' data-index='2' data-cpage='quarter'>四分之一</view>
-  <view class='semifinalsbh flex'  data-index='3'  data-cpage='final'>半决赛</view>
-  <view class='final flex'  data-index='4' >总决赛</view>
-  <view class='end flex'  data-index='0' data-cpage='end'>大结局</view>
+  <view class='semifinalsbh flex' data-index='3' data-cpage='final'>半决赛</view>
+  <view class='final flex' data-index='4'>总决赛</view>
+  <view class='end flex' data-index='0' data-cpage='end'>大结局</view>
   <image class='guide' style='left: {{guideLeft}}rpx' src='/image/guide.png'></image>
 </view>
 
 
 <!--列表  B-->
-<view hidden='{{cpage !== "index"}}'  >
+<view hidden='{{cpage !== "index"}}'>
   <view class='bigL'>
     <view class='b_top'>喜欢ta，就投ta</view>
     <view class='b_main'>
-    
+
       <!-- <scroll-view scroll-x="true"> -->
-        <view class='b_lists' >
-          <view class='b_list' wx:for="{{bigList.votePeopleInfoList}}" wx:key='*votePeopleInfoList' scroll-x="true" bindtap='goDetail'>
-            <view class='b_content display'>
-              <view class='b_mark'>{{index+1}}</view>
-              <view class='news display'>
-                <text class='display'>{{item.commentNumber||0}}</text>
-                <image src='../../image/news.png' class='b_news'></image>
-              </view>
-              <image src='{{item.votePeoplePic}}' class='b_head'></image>
-              <view class='b_name'>{{item.votePeopleName}}</view>
-              <view class='b_num'>{{item.voteNumberOne}}</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
+      <view class='b_lists'>
+        <view class='b_list' wx:for="{{bigList.votePeopleInfoList}}" wx:key='*votePeopleInfoList' scroll-x="true" bindtap='goDetail'>
+          <view class='b_content display'>
+            <view class='b_mark'>{{index+1}}</view>
+            <view class='news display'>
+              <text class='display'>{{item.commentNumber||0}}</text>
+              <image src='../../image/news.png' class='b_news'></image>
+            </view>
+            <image src='{{item.votePeoplePic}}' class='b_head'></image>
+            <view class='b_name'>{{item.votePeopleName}}</view>
+            <view class='b_num'>{{item.voteNumberOne}}</view>
+            <view>
+              <image src='../../image/toupiao.png' class='b_tou'></image>
+              <view class='b_toua'>投ta</view>
             </view>
           </view>
-       
         </view>
+
+      </view>
       <!-- </scroll-view> -->
-  
+
     </view>
 
 
@@ -59,14 +59,14 @@
 <!--列表  E-->
 
 <!--四分之一 B -->
-<view hidden='{{cpage !== "quarter"}}'   >
+<view hidden='{{cpage !== "quarter"}}'>
   <view class='quarter_top'>二选一,看你的眼光了</view>
   <view class='quarter_main'>
     <image src='../../image/left.png' class='quarter_left b_direction'></image>
     <scroll-view scroll-x="true">
-      <view class='quarter_lists'  scroll-x="true" style='height:460rpx'>
+      <view class='quarter_lists' scroll-x="true" style='height:460rpx'>
         <view class='quarter_one'>
-          <view class='quarter_list'bindtap='goDetail' >
+          <view class='quarter_list' bindtap='goDetail'>
             <view class='b_content display'>
               <view class='b_mark'>1</view>
               <view class='news display'>
@@ -101,7 +101,7 @@
             </view>
           </view>
         </view>
-      
+
       </view>
     </scroll-view>
     <image src='../../image/right.png' class='quarter_right b_direction'></image>
@@ -138,7 +138,7 @@
 <!--四分之一 E -->
 
 <!--半决赛 B -->
-<view hidden='{{cpage !== "final"}}' >
+<view hidden='{{cpage !== "final"}}'>
   <view class='quarter_top'>二选一,看你的眼光了</view>
   <view class='quarter_main'>
     <image src='../../image/left.png' class='quarter_left b_direction'></image>
@@ -254,14 +254,14 @@
 <!--半决赛 E  -->
 
 <!--大结局 B  -->
-<view hidden='{{cpage !=="end"}}'  >
+<view hidden='{{cpage !=="end"}}'>
   <view class='bigL '>
     <view class='endheight'></view>
     <view class='end_main'>
       <image src='../../image/left.png' class='end_left b_direction'></image>
       <scroll-view scroll-x="true" style="height: 560rpx;">
         <view class='end_lists'>
-          <view class='end_list' wx:for="{{bigList.groupOne}}" wx:key='*groupOne' scroll-x="true" bindtap='goDetail'>
+          <view class='end_list' wx:for="{{bigList.groupOne}}" wx:key='*groupOne' scroll-x="true" bindtap='goDetail' data-id='{{item.id}}'>
             <image src='../../image/1st.png' class='numImg'></image>
             <view class='b_content display'>
               <view class='b_mark'>{{index+1}}</view>
@@ -279,48 +279,48 @@
                 <text> {{item.voteNumberThree}}</text> </view>
               <view class='end_bigName'>总决赛
                 <text> {{item.voteNumberFour}}</text> </view>
-                <view class='end_sum'>{{item.voteChipFour}}</view>
+              <view class='end_sum'>{{item.voteChipFour}}</view>
             </view>
-          </view>       
+          </view>
         </view>
       </scroll-view>
       <image src='../../image/right.png' class='end_right b_direction'></image>
     </view>
     <view class='end_center'>
       <view class='end_one'>
-            <view class='display fl'>
-              <image src='../../image/tijiao.png' class='end_img'></image>
-              <text class='end_number'>21371人参与</text>
-          </view> 
-          <view class='display fr'>
-            <text class='end_number pr'>共投票23112张</text>
-            <image src='../../image/piaoshu.png' class='end_img'></image>          
-          </view> 
+        <view class='display fl'>
+          <image src='../../image/tijiao.png' class='end_img'></image>
+          <text class='end_number'>21371人参与</text>
+        </view>
+        <view class='display fr'>
+          <text class='end_number pr'>共投票23112张</text>
+          <image src='../../image/piaoshu.png' class='end_img'></image>
+        </view>
       </view>
-        <view class=' end_one'>
-            <view class='display fl'>
-              <image src='../../image/zhuwei.png' class='end_img'></image>
-              <text class='end_number'>共投票23112张</text>
-          </view> 
-          <view class='display fr'>
-            <text class='end_number pr'>共投入1243110筹码</text>
-            <image src='../../image/chouma.png' class='end_img'></image>          
-          </view> 
+      <view class=' end_one'>
+        <view class='display fl'>
+          <image src='../../image/zhuwei.png' class='end_img'></image>
+          <text class='end_number'>共投票23112张</text>
+        </view>
+        <view class='display fr'>
+          <text class='end_number pr'>共投入1243110筹码</text>
+          <image src='../../image/chouma.png' class='end_img'></image>
+        </view>
       </view>
-    
+
     </view>
-    
+
   </view>
   <view class='b_bottom'>
-  <view class='quarter_time'>
+    <view class='quarter_time'>
       <text>大奖获得者：米开朗基罗</text>
     </view>
     <view>
       <image src='{{userInfo.avatarUrl}}' class='b_btm_img'></image>
       <text class='display b_btm_num'>你获得了第20名</text>
     </view>
-     <view class='bottom_btns'>查看排名</view>
-      <view class='bottom_btn'>成绩一览</view>
+    <view class='bottom_btns'>查看排名</view>
+    <view class='bottom_btn'>成绩一览</view>
   </view>
 </view>
 <!--大结局 E -->
