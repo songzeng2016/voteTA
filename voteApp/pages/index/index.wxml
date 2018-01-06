@@ -57,7 +57,7 @@
       <view class='notice'>天下才共八斗，学共五车，你的级别如何呢？</view>
       <view class='content'>
         <view class='leftList'>
-          <block wx:for='{{gradeList}}' wx:key='*grade.leftList'>
+          <block wx:for='{{gradeList.leftList}}' wx:key='*gradeList.leftList'>
             <!-- <template is='capsule' data='{{item}}' /> -->
             <view class='capsuleWrapper'>
               <capsule item='{{item}}'></capsule>
@@ -65,8 +65,11 @@
           </block>
         </view>
         <view class='rightList'>
-          <block wx:for='{{grade.rightList}}' wx:key='*grade.rightList'>
-            <template is='capsule' data='{{item}}' />
+          <block wx:for='{{gradeList.rightList}}' wx:key='*gradeList.rightList'>
+            <!-- <template is='capsule' data='{{item}}' /> -->
+             <view class='capsuleWrapper'>
+              <capsule item='{{item}}'></capsule>
+            </view> 
           </block>
         </view>
       </view>

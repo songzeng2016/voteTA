@@ -132,6 +132,10 @@ page, .wrapper {
 
 /* index */
 
+.index {
+  padding-bottom: 120rpx;
+}
+
 .index .notice {
   background: #e6e6e6;
 }

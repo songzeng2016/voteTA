@@ -8,69 +8,6 @@ Page({
   data: {
     cpage: 'index',
     guideLeft: 335,
-    grade: {
-      leftList: [
-        {
-          desc: '一斗',
-          num: '0000-1999',
-          lbgc: '#53aadd',
-        },
-        {
-          desc: '二斗',
-          num: '0000-1999',
-          lbgc: '#53aadd',
-        },
-        {
-          desc: '三斗',
-          num: '0000-1999',
-          lbgc: '#53aadd',
-        },
-        {
-          desc: '四斗',
-          num: '0000-1999',
-          lbgc: '#53aadd',
-        },
-        {
-          desc: '五斗',
-          num: '0000-1999',
-          lbgc: '#2d71b6',
-        },
-        {
-          desc: '六斗',
-          num: '0000-1999',
-        },
-        {
-          desc: '七斗',
-          num: '0000-1999',
-        },
-        {
-          desc: '八斗',
-          num: '8000-9999',
-        },
-      ],
-      rightList: [
-        {
-          desc: '一车',
-          num: '0000-1999',
-        },
-        {
-          desc: '二车',
-          num: '0000-1999',
-        },
-        {
-          desc: '三车',
-          num: '0000-1999',
-        },
-        {
-          desc: '四车',
-          num: '0000-1999',
-        },
-        {
-          desc: '五车',
-          num: '0000-1999',
-        },
-      ]
-    }
   },
 
   // 导航切换页面
@@ -114,12 +51,11 @@ Page({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         getData.thirdPartyMark = res.code
-      }
-    })
+   
     // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
+    // wx.getSetting({
+    //   success: res => {
+    //     if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
@@ -152,7 +88,11 @@ Page({
               }
             }
           })
-        }
+    //     }
+    //   }
+    // })
+
+
       }
     })
   },
@@ -180,11 +120,20 @@ Page({
     const that = this
 
     wc.get(app.sessionId, '/app/vote/get_vote_level_list.action', {}, json => {
-      let gradeList = json
+      let gradeList = {
+        leftList: [],
+        rightList: []
+      }
 
-      gradeList.forEach((item, i) => {
+      json.forEach((item, i) => {
         item.rankNumber = item.levelName
         item.integral = `${item.levelScore}-${item.levelScoreEnd}`
+
+        if (item.rankNumber.indexOf('斗') >= 0) {
+          gradeList.leftList.push(item)
+        } else {
+          gradeList.rightList.push(item)
+        }
       })
 
       that.setData({ gradeList })
