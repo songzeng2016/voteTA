@@ -68,7 +68,7 @@
         <view wx:for="{{bigList}}" wx:key='*bigList'>
           <view  wx:if="{{item.groupOne.length!=0}}">
           <view class='quarter_group'>第一组</view>
-             <view class='quarter_one' wx:for="{{bigList.groupOne}}" wx:key='*groupOne'>
+             <view class='quarter_one' wx:for="{{item.groupOne}}" wx:key='*groupOne'>
               <view class='quarter_list' bindtap='goDetail'>
                 <view class='b_content display'>
                   <view class='b_mark'>{{index+1}}</view>
