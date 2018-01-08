@@ -36,7 +36,7 @@ page{background: #E5E5E5;}
 .quarter_main{position: relative;padding: 20rpx  40rpx;}
 .quarter_top{color: #7F7F7F;height: 40rpx;line-height: 75rpx;font-size: 28rpx;padding-left: 80rpx;}
 .vs{background: #999999;width:70rpx;height: 40rpx;line-height:40rpx;font-size: 24rpx;border-radius: 20rpx;text-align: center;color: #fff;font-weight: 600; position: absolute;top: 300rpx;left: 180rpx; z-index: 9;}
-.quarter_group{position: absolute;top: -40rpx;left: 180rpx;font-size: 24rpx;color: #040000;z-index: 99;}
+.quarter_group{position: absolute;top: 20rpx;left: 180rpx;font-size: 24rpx;color: #040000;z-index: 99;}
 .quarter_list{width: 200rpx;height: 400rpx;background: #fff;border-radius: 10rpx; position: relative;border: 1 solid #ccc;margin-right: 34rpx;display: inline-block;}
 .quarter_one{position: relative;height: 400rpx; flex: 1； }
 .quarter_lists{height: 400rpx;width: 100%; display: flex; display: -webkit-box;flex-direction: column;padding-top: 60rpx;}   
