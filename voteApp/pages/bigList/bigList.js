@@ -86,7 +86,14 @@ Page({
       let mineTotalVoteNumber = bigList.mineTotalVoteNumber
       let mineTotalChipNumber = bigList.mineTotalChipNumber
       console.log(bigList)
-      that.setData({ bigList, mineTotalVoteNumber, mineTotalChipNumber })
+      let fourArr = []
+      for (var key in bigList){
+        if (bigList[key] instanceof Array){
+          fourArr.push(bigList[key])
+        }
+      }
+      console.log(fourArr)
+      that.setData({ bigList, mineTotalVoteNumber, mineTotalChipNumber, fourArr })
 
     })
   },
