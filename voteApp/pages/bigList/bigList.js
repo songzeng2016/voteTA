@@ -53,6 +53,8 @@ Page({
     let cpage = 'index'
     let guideLeft = 0
 
+    this.data.id = id
+
     if (index == 1) {
       guideLeft = 24
       cpage = 'index'
@@ -87,8 +89,8 @@ Page({
       let mineTotalChipNumber = bigList.mineTotalChipNumber
       console.log(bigList)
       let fourArr = []
-      for (var key in bigList){
-        if (bigList[key] instanceof Array){
+      for (var key in bigList) {
+        if (bigList[key] instanceof Array) {
           fourArr.push(bigList[key])
         }
       }
@@ -96,6 +98,15 @@ Page({
       that.setData({ bigList, mineTotalVoteNumber, mineTotalChipNumber, fourArr })
 
     })
+  },
+
+  // 查看排名
+  navToRanking: function (e) {
+    wc.navigateTo(`/pages/ranking/ranking?id=${this.data.id}`)
+  },
+  // 查看成绩
+  navToScore: function (e) {
+    wc.navigateTo(`/pages/score/score?id=${this.data.id}`)
   },
 
   /**

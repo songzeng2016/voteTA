@@ -71,6 +71,7 @@ Page({
 
               wc.get('', '/app/vote/register.action', getData, json => {
                 app.sessionId = json.sessionId
+                app.globalData.userInfo.id = json.id
 
                 that.setData({  // 更新我的信息
                   myInfo: json

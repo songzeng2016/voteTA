@@ -1,4 +1,8 @@
 // pages/ranking/ranking.js
+const app = getApp()
+
+const { wc } = app
+
 Page({
 
   /**
@@ -14,11 +18,26 @@ Page({
     this.setData({ sType })
   },
 
+  // 获取排名列表
+  getRankingList: function () {
+    const that = this
+    let getData = {
+      pageSize: 0,
+      pageOffset: 100
+    }
+
+    wc.get(app.sessionId, '/app/vote/get_total_ranked_list.action', getData, json => {
+      that.setData({
+        rankingList: json
+      })
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getRankingList()
   },
 
   /**

@@ -12,6 +12,22 @@ Page({
   },
 
   /**
+   * 添加评论
+   * @param {String} content  - 评论内容
+   */
+  addComment: function (content) {
+    let getData = {
+      commentContent: "马拉多纳和其他的选手不是同一个层次的。他远远胜于其他的天才，相信像他那样的足球选手应该不会再出现第二个了。",
+      userId: app.globalData.userInfo.id,
+      votePeopleInfoId: this.id
+    }
+
+    wc.get(app.sessionId, '/app/vote/add_vote_comment.action', getData, json => {
+
+    })
+  },
+
+  /**
    * 获取评论列表
    * @param {Number} count  - 分页的条数
    * @param {Number} page   - 当前页数
@@ -26,7 +42,9 @@ Page({
     }
 
     wc.get(app.sessionId, '/app/vote/get_votecomment_list.action', getData, json => {
-
+      that.setData({
+        commentList: json
+      })
     })
   },
 
@@ -37,6 +55,10 @@ Page({
     let id = options.id || ''
     this.id = id
     this.getCommentList({ id })
+
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
   },
 
   /**

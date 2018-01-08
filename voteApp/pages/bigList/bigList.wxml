@@ -66,9 +66,9 @@
     <scroll-view scroll-x="true">
       <view class='quarter_lists' scroll-x="true" style='height:460rpx'>
         <view wx:for="{{fourArr}}" wx:key='*fourArr'>
-          <view  wx:if="{{item.groupOne.length!=0}}">
-          <view class='quarter_group'>第一组</view>
-             <view class='quarter_one' wx:for="{{item.groupOne}}" wx:key='*groupOne'>
+          <view wx:if="{{item.groupOne.length!=0}}">
+            <view class='quarter_group'>第一组</view>
+            <view class='quarter_one' wx:for="{{item.groupOne}}" wx:key='*groupOne'>
               <view class='quarter_list' bindtap='goDetail'>
                 <view class='b_content display'>
                   <view class='b_mark'>{{index+1}}</view>
@@ -104,8 +104,8 @@
               </view>
             </view>
           </view>
-           
-         
+
+
 
         </view>
 
@@ -327,8 +327,8 @@
       <image src='{{userInfo.avatarUrl}}' class='b_btm_img'></image>
       <text class='display b_btm_num'>你获得了第20名</text>
     </view>
-    <view class='bottom_btns'>查看排名</view>
-    <view class='bottom_btn'>成绩一览</view>
+    <view class='bottom_btns' bindtap='navToRanking'>查看排名</view>
+    <view class='bottom_btn' bindtap='navToScore'>成绩一览</view>
   </view>
 </view>
 <!--大结局 E -->
