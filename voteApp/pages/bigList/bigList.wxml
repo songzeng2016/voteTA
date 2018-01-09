@@ -17,7 +17,7 @@
 
       <!-- <scroll-view scroll-x="true"> -->
       <view class='b_lists'>
-        <view class='b_list' wx:for="{{bigList.votePeopleInfoList}}" wx:key='*votePeopleInfoList' scroll-x="true" bindtap='goDetail'>
+        <view class='b_list' wx:for="{{bigList.votePeopleInfoList}}" wx:key='*votePeopleInfoList' scroll-x="true" data-id='{{item.id}}' bindtap='goDetail'>
           <view class='b_content display'>
             <view class='b_mark'>{{index+1}}</view>
             <view class='news display'>
@@ -73,7 +73,7 @@
             <view class='quarter_group' wx:elif="{{index==2}}">第三组</view>
             <view class='quarter_group' wx:elif="{{index==3}}">第四组</view>
 
-            <view class='quarter_list' bindtap='goDetail'>
+            <view class='quarter_list' bindtap='goDetail' data-id='{{item[0].id}}'>
               <view class='b_content display'>
                 <view class='b_mark'>1</view>
                 <view class='news display'>
@@ -92,7 +92,7 @@
 
             <view class='vs'>VS</view>
 
-            <view class='quarter_list' bindtap='goDetail'>
+            <view class='quarter_list' bindtap='goDetail'data-id='{{item[1].id}}'>
               <view class='b_content display'>
                 <view class='b_mark'>2</view>
                 <view class='news display'>
@@ -165,7 +165,7 @@
           <view class='quarter_group' wx:elif="{{index==3}}">第四组</view>
 
           <view class='quarter_one'>
-            <view class='quarter_list' bindtap='goDetail'>
+            <view class='quarter_list' bindtap='goDetail' data-id='{{item[0].id}}'>
               <view class='b_content display'>
                 <view class='b_mark'>1</view>
                 <view class='news display'>
@@ -174,7 +174,7 @@
                 </view>
                 <image src='{{item[0].votePeoplePic}}' class='b_head'></image>
                 <view class='b_name'>{{item[0].votePeopleName}}</view>
-                <view class='b_num'>{{item[1].voteNumberTwo||0}}</view>
+                <view class='b_num'>{{item[0].voteNumberTwo||0}}</view>
                 <view>
                   <image src='../../image/toupiao.png' class='b_tou'></image>
                   <view class='b_toua'>投ta</view>
@@ -182,7 +182,7 @@
               </view>
             </view>
             <view class='vs'>VS</view>
-            <view class='quarter_list'>
+            <view class='quarter_list'  bindtap='goDetail' data-id='{{item[1].id}}'>
               <view class='b_content display'>
                 <view class='b_mark'>2</view>
                 <view class='news display'>
@@ -251,7 +251,7 @@
           <view class='quarter_group' wx:if="{{index==0}}">第一组</view>
         
           <view class='quarter_one'>
-            <view class='quarter_list' bindtap='goDetail'>
+            <view class='quarter_list' bindtap='goDetail' bindtap='goDetail' data-id='{{item[0].id}}'>
               <view class='b_content display'>
                 <view class='b_mark'>1</view>
                 <view class='news display'>
@@ -260,7 +260,7 @@
                 </view>
                 <image src='{{item[0].votePeoplePic}}' class='b_head'></image>
                 <view class='b_name'>{{item[0].votePeopleName}}</view>
-                <view class='b_num'>{{item[1].voteNumberTwo||0}}</view>
+                <view class='b_num'>{{item[0].voteNumberTwo||0}}</view>
                 <view>
                   <image src='../../image/toupiao.png' class='b_tou'></image>
                   <view class='b_toua'>投ta</view>
@@ -268,7 +268,7 @@
               </view>
             </view>
             <view class='vss'>VS</view>
-            <view class='quarter_list' bindtap='goDetail'>
+            <view class='quarter_list' bindtap='goDetail'  bindtap='goDetail' data-id='{{item[1].id}}'>
               <view class='b_content display'>
                 <view class='b_mark'>2</view>
                 <view class='news display'>
