@@ -72,9 +72,7 @@ Page({
       cpage = 'end'
     }
     this.setData({ cpage, guideLeft })
-
     // this.data.index  = status
-
     console.log("status" + status)
     let getData = {
       pageSize: 0,
@@ -93,6 +91,7 @@ Page({
         if (bigList[key] instanceof Array) {
           fourArr.push(bigList[key])
         }
+        // console.log(key)
       }
       console.log(fourArr)
       that.setData({ bigList, mineTotalVoteNumber, mineTotalChipNumber, fourArr })

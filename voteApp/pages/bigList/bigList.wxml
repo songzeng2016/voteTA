@@ -3,7 +3,7 @@
   <view class=' flex' data-index='1' data-cpage='index'>大名单</view>
   <view class='quarter flex' data-index='2' data-cpage='quarter'>四分之一</view>
   <view class='semifinalsbh flex' data-index='3' data-cpage='final'>半决赛</view>
-  <view class='final flex' data-index='4'>总决赛</view>
+  <view class='final flex' data-index='4' data-cpage='boss'>总决赛</view>
   <view class='end flex' data-index='0' data-cpage='end'>大结局</view>
   <image class='guide' style='left: {{guideLeft}}rpx' src='/image/guide.png'></image>
 </view>
@@ -66,48 +66,53 @@
     <scroll-view scroll-x="true">
       <view class='quarter_lists' scroll-x="true" style='height:460rpx'>
         <view wx:for="{{fourArr}}" wx:key='*fourArr'>
-          <view wx:if="{{item.groupOne.length!=0}}">
-            <view class='quarter_group'>第一组</view>
-            <view class='quarter_one' wx:for="{{item.groupOne}}" wx:key='*groupOne'>
-              <view class='quarter_list' bindtap='goDetail'>
-                <view class='b_content display'>
-                  <view class='b_mark'>{{index+1}}</view>
-                  <view class='news display'>
-                    <text class='display'>{{item.commentNumber||0}}</text>
-                    <image src='../../image/news.png' class='b_news'></image>
-                  </view>
-                  <image src='{{item.votePeoplePic}}' class='b_head'></image>
-                  <view class='b_name'>{{item.votePeopleName}}</view>
-                  <view class='b_num'>{{item.voteNumberTwo||0}}</view>
-                  <view>
-                    <image src='../../image/toupiao.png' class='b_tou'></image>
-                    <view class='b_toua'>投ta</view>
-                  </view>
+          <view class='quarter_one'>
+
+            <view class='quarter_group' wx:if="{{index==0}}">第一组</view>
+            <view class='quarter_group' wx:elif="{{index==1}}">第二组</view>
+            <view class='quarter_group' wx:elif="{{index==2}}">第三组</view>
+            <view class='quarter_group' wx:elif="{{index==3}}">第四组</view>
+
+            <view class='quarter_list' bindtap='goDetail'>
+              <view class='b_content display'>
+                <view class='b_mark'>1</view>
+                <view class='news display'>
+                  <text class='display'>{{item[0].commentNumber||0}}</text>
+                  <image src='../../image/news.png' class='b_news'></image>
                 </view>
-              </view>
-              <view class='vs'>VS</view>
-              <view class='quarter_list' bindtap='goDetail'>
-                <view class='b_content display'>
-                  <view class='b_mark'>{{index+1}}</view>
-                  <view class='news display'>
-                    <text class='display'>{{item.commentNumber||0}}</text>
-                    <image src='../../image/news.png' class='b_news'></image>
-                  </view>
-                  <image src='{{item.votePeoplePic}}' class='b_head'></image>
-                  <view class='b_name'>{{item.votePeopleName}}</view>
-                  <view class='b_num'>{{item.voteNumberTwo||0}}</view>
-                  <view>
-                    <image src='../../image/toupiao.png' class='b_tou'></image>
-                    <view class='b_toua'>投ta</view>
-                  </view>
+                <image src='{{item[0].votePeoplePic}}' class='b_head'></image>
+                <view class='b_name'>{{item[0].votePeopleName}}</view>
+                <view class='b_num'>{{item[0].voteNumberTwo||0}}</view>
+                <view>
+                  <image src='../../image/toupiao.png' class='b_tou'></image>
+                  <view class='b_toua'>投ta</view>
                 </view>
               </view>
             </view>
+
+            <view class='vs'>VS</view>
+
+            <view class='quarter_list' bindtap='goDetail'>
+              <view class='b_content display'>
+                <view class='b_mark'>2</view>
+                <view class='news display'>
+                  <text class='display'>{{item[1].commentNumber||0}}</text>
+                  <image src='../../image/news.png' class='b_news'></image>
+                </view>
+                <image src='{{item[1].votePeoplePic}}' class='b_head'></image>
+                <view class='b_name'>{{item[1].votePeopleName}}</view>
+                <view class='b_num'>{{item[1].voteNumberTwo||0}}</view>
+                <view>
+                  <image src='../../image/toupiao.png' class='b_tou'></image>
+                  <view class='b_toua'>投ta</view>
+                </view>
+              </view>
+            </view>
+
           </view>
 
-
-
         </view>
+
 
 
       </view>
@@ -151,79 +156,53 @@
   <view class='quarter_main'>
     <image src='../../image/left.png' class='quarter_left b_direction'></image>
     <scroll-view scroll-x="true" style="height: 460rpx;">
+
       <view class='quarter_lists' scroll-x="true">
-        <view class='quarter_one'>
-          <view class='quarter_list' bindtap='goDetail'>
-            <view class='b_content display'>
-              <view class='b_mark'>1</view>
-              <view class='news display'>
-                <text class='display'>12</text>
-                <image src='../../image/news.png' class='b_news'></image>
+        <block wx:for="{{fourArr}}" wx:key='*fourArr'>
+          <view class='quarter_group' wx:if="{{index==0}}">第一组</view>
+          <view class='quarter_group' wx:elif="{{index==1}}">第二组</view>
+          <view class='quarter_group' wx:elif="{{index==2}}">第三组</view>
+          <view class='quarter_group' wx:elif="{{index==3}}">第四组</view>
+
+          <view class='quarter_one'>
+            <view class='quarter_list' bindtap='goDetail'>
+              <view class='b_content display'>
+                <view class='b_mark'>1</view>
+                <view class='news display'>
+                  <text class='display'>{{item[0].commentNumber||0}}</text>
+                  <image src='../../image/news.png' class='b_news'></image>
+                </view>
+                <image src='{{item[0].votePeoplePic}}' class='b_head'></image>
+                <view class='b_name'>{{item[0].votePeopleName}}</view>
+                <view class='b_num'>{{item[1].voteNumberTwo||0}}</view>
+                <view>
+                  <image src='../../image/toupiao.png' class='b_tou'></image>
+                  <view class='b_toua'>投ta</view>
+                </view>
               </view>
-              <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
+            </view>
+            <view class='vs'>VS</view>
+            <view class='quarter_list'>
+              <view class='b_content display'>
+                <view class='b_mark'>2</view>
+                <view class='news display'>
+                  <text class='display'>{{item[1].commentNumber||0}}</text>
+                  <image src='../../image/news.png' class='b_news'></image>
+                </view>
+                <image src='{{item[1].votePeoplePic}}' class='b_head'></image>
+                <view class='b_name'>{{item[1].votePeopleName}}</view>
+                <view class='b_num'>{{item[1].voteNumberTwo||0}}</view>
+                <view>
+                  <image src='../../image/toupiao.png' class='b_tou'></image>
+                  <view class='b_toua'>投ta</view>
+                </view>
               </view>
             </view>
           </view>
-          <view class='vs'>VS</view>
-          <view class='quarter_group'>第二组</view>
-          <view class='quarter_list'>
-            <view class='b_content display'>
-              <view class='b_mark'>1</view>
-              <view class='news display'>
-                <text class='display'>12</text>
-                <image src='../../image/news.png' class='b_news'></image>
-              </view>
-              <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
-            </view>
-          </view>
-        </view>
-        <view class='quarter_one'>
-          <view class='quarter_list' bindtap='goDetail'>
-            <view class='b_content display'>
-              <view class='b_mark'>1</view>
-              <view class='news display'>
-                <text class='display'>12</text>
-                <image src='../../image/news.png' class='b_news'></image>
-              </view>
-              <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
-            </view>
-          </view>
-          <view class='vs'>VS</view>
-          <view class='quarter_list'>
-            <view class='b_content display'>
-              <view class='b_mark'>1</view>
-              <view class='news display'>
-                <text class='display'>12</text>
-                <image src='../../image/news.png' class='b_news'></image>
-              </view>
-              <image src='../../image/1.jpg' class='b_head'></image>
-              <view class='b_name'>齐达内</view>
-              <view class='b_num'>5689</view>
-              <view>
-                <image src='../../image/toupiao.png' class='b_tou'></image>
-                <view class='b_toua'>投ta</view>
-              </view>
-            </view>
-          </view>
-        </view>
+        </block>
       </view>
+
+
     </scroll-view>
     <image src='../../image/right.png' class='quarter_right b_direction'></image>
   </view>
@@ -260,6 +239,91 @@
   </view>
 </view>
 <!--半决赛 E  -->
+
+<!--决赛 B -->
+<view >
+  <view class='quarter_top'>二选一,看你的眼光了</view>
+  <view class='quarter_main'>
+
+    <scroll-view scroll-x="true" style="height: 460rpx;">
+      <view class='quarter_lists' scroll-x="true">
+        <block wx:for="{{fourArr}}" wx:key='*fourArr'>
+          <view class='quarter_group' wx:if="{{index==0}}">第一组</view>
+        
+          <view class='quarter_one'>
+            <view class='quarter_list' bindtap='goDetail'>
+              <view class='b_content display'>
+                <view class='b_mark'>1</view>
+                <view class='news display'>
+                  <text class='display'>{{item[0].commentNumber||0}}</text>
+                  <image src='../../image/news.png' class='b_news'></image>
+                </view>
+                <image src='{{item[0].votePeoplePic}}' class='b_head'></image>
+                <view class='b_name'>{{item[0].votePeopleName}}</view>
+                <view class='b_num'>{{item[1].voteNumberTwo||0}}</view>
+                <view>
+                  <image src='../../image/toupiao.png' class='b_tou'></image>
+                  <view class='b_toua'>投ta</view>
+                </view>
+              </view>
+            </view>
+            <view class='vss'>VS</view>
+            <view class='quarter_list' bindtap='goDetail'>
+              <view class='b_content display'>
+                <view class='b_mark'>2</view>
+                <view class='news display'>
+                  <text class='display'>{{item[1].commentNumber||0}}</text>
+                  <image src='../../image/news.png' class='b_news'></image>
+                </view>
+                <image src='{{item[1].votePeoplePic}}' class='b_head'></image>
+                <view class='b_name'>{{item[1].votePeopleName}}</view>
+                <view class='b_num'>{{item[1].voteNumberTwo||0}}</view>
+                <view>
+                  <image src='../../image/toupiao.png' class='b_tou'></image>
+                  <view class='b_toua'>投ta</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+
+  </view>
+  <view>
+    <view class='sem_commen'>
+      <view class='null'></view>
+      <view class='sem_top'>
+        <view class='sem_Tl'>
+          <text class='display sem_tt'>558</text>
+          <text class='display sem_bb'>56050筹码</text>
+        </view>
+        <view class='sem_Tr'>
+          <text class='display sem_tt'>932</text>
+          <text class='display sem_bb'>56050筹码</text>
+        </view>
+      </view>
+      <view class='sem_btm'>
+        <view class='sem_t1 textCenter'>筹码池共计109304</view>
+        <view class='sem_t2 textCenter'>被958人均分，你赢得筹码308</view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='b_bottom'>
+    <view class='quarter_time'>
+      <text>明早八点开始半决赛</text>
+    </view>
+    <view>
+      <image src='{{userInfo.avatarUrl}}' class='b_btm_img'></image>
+      <text class='display b_btm_num'>共押注200筹码，赢得342筹码</text>
+    </view>
+
+  </view>
+</view>
+<!--决赛 E  -->
+
 
 <!--大结局 B  -->
 <view hidden='{{cpage !=="end"}}'>
